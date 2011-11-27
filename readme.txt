@@ -25,6 +25,18 @@ WordPress Social Login = Social Connect Plugin + HybridAuth Library + some hack 
 
 == Frequently Asked Questions ==
 
+= Do I need to add template tags to my theme? =
+
+Social Connect attempts to work with the default WordPress comment, login and registration forms.
+
+If you want to add the social connect login or registration forms to another location in your theme, you can insert the following code in that location:
+
+`<?php do_action( 'social_connect_form' ); ?>`
+
+= What do I do if the Rewrite Diagnostics fail? =
+
+If you get a 403 and 404 on the Rewrite Diagnostics test, please request your hosting provider whitelist your domain on mod_security.
+
 = Where can I report bugs & get support? =
 
 To get help and support, you can contact me by email at 
