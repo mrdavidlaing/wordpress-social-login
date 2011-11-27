@@ -11,7 +11,7 @@ License: GPL2
 
 /**
  * Check technical requirements before activating the plugin.
- * Wordpress 3.0 or newer required
+ * Wordpress 3.0 or newer required, 3.1 would be better
  * PHP 5.2 or newer
  * CURL Required
  */
