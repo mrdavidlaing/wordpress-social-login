@@ -19,7 +19,7 @@ WordPress Social Login = Social Connect Plugin + HybridAuth Library + some hack 
 
 == Installation ==
 
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
+1. Upload `wordpress-social-login` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Visit the "Settings | WP Social Login" administration page to configure social media providers.
 
@@ -44,8 +44,9 @@ hybridauth (at) gmail (dot) com
 
 == Screenshots ==
 
-1. **Comment** - buttons for 3rd party services are also provided on the comment form.
-2. **Login** - on the login and registration form, buttons for 3rd party services are provided.
+1. **Comment** - Buttons for 3rd party services are also provided on the comment form.
+2. **Login** - On the login and registration form, buttons for 3rd party services are provided.
+3. **Setup** - To correctly setup these Identity Providers please carefully follow the help section of each one.
 
 == Changelog ==
 
