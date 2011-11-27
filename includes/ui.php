@@ -16,7 +16,7 @@ function wsl_render_login_form()
 		if( get_option( 'wsl_settings_' . $provider_id . '_enabled' ) ){
 			?>
 			<a href="javascript:void(0);" title="Connect with <?php echo $provider_name ?>" class="wsl_connect_with_provider" provider="<?php echo $provider_id ?>">
-				<img alt="<?php echo $provider_name ?>" title="<?php echo $provider_name ?>" src="<?php echo $assets_base_url . $provider_id . '.png' ?>" />
+				<img alt="<?php echo $provider_name ?>" title="<?php echo $provider_name ?>" src="<?php echo $assets_base_url . strtolower( $provider_id ) . '.png' ?>" />
 			</a>
 			<?php
 		} 
