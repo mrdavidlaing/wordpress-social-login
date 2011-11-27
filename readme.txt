@@ -3,7 +3,7 @@ Contributors: miled
 Tags:  twitter, facebook, google, yahoo, linkedin, myspace, foursquare, aol, login, register, comment
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 1.1
+Stable tag: 1.1.2
 
 Allow your visitors to comment and login with social networks and identities providers such as Facebook, Twitter, Foursquare and Google.
 
@@ -37,10 +37,14 @@ http://hybridauth.sourceforge.net/contact.html
 
 == Changelog ==
 
-= 1.1 =
+= 1.1.2 =
+
+* Fix a bug with hybridauth settings
+
+= 1.1.1 =
 
 * Fix a bug when displaying not enbaled provider on the login form
 
-= 1.0 =
+= 1.1.0 =
 
 * Initial release. 
