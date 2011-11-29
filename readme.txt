@@ -33,7 +33,9 @@ WordPress Social Login = Social Connect Plugin + HybridAuth Library + some hack 
 
 = Where can I report bugs & get support? =
 
-To get **help and support**, join us on the [discussion group](https://groups.google.com/forum/#!forum/hybridauth-plugins) or email me at <hybridauth (at) gmail (dot) com>
+As an open source project and alpha stage plugin, We Appreciate Your Feedback! 
+
+Also to get **help and support**, join us on the [discussion group](https://groups.google.com/forum/#!forum/hybridauth-plugins) or email me at &lt;hybridauth (at) gmail (dot) com&gt;
 
 == Screenshots ==
 

@@ -28,7 +28,7 @@ function wsl_activate()
 			die( sprintf( __( "WordPress Social Login requires the <a href='http://www.php.net/manual/en/intro.curl.php'>PHP libcurl extension</a> to be installed." ) ) ); 
 		} 
 
-		if ( version_compare( PHP_VERSION, '5.2', '<' ) ){
+		if ( version_compare( PHP_VERSION, '5.2.0', '<' ) ){
 			die( sprintf( __( "WordPress Social Login requires WordPress 5.2 or newer." ) ) );
 		}
 	}
