@@ -33,8 +33,7 @@ WordPress Social Login = Social Connect Plugin + HybridAuth Library + some hack 
 
 = Where can I report bugs & get support? =
 
-To get help and support, you can contact me by email at: 
-hybridauth(at)gmail(dot)com
+To get **help and support**, join us on the [discussion group](https://groups.google.com/forum/#!forum/hybridauth-plugins) or email me at <hybridauth (at) gmail (dot) com>
 
 == Screenshots ==
 
