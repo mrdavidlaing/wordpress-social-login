@@ -9,11 +9,11 @@ Allow your visitors to comment and login with social networks and identities pro
 
 == Description ==
 
-**VERY IMPORTANT**
+**IMPORTANT**
 
-* This plugin is still in **alpha stage** and as such, should be used for **testing only**.
+* This plugin is still in **Alpha Stage** and as such, should be used only for **testing only** until a real stable release come to life
 * This plugin is tested default installation of WordPress with no extra add-ons.
-* This plugin is for peoples who don't fancy the idea of having a middleman webservice for this puropose. if not, then most likely this plugin is not the right one for you!
+* This plugin is for peoples who don't fancy the idea of having a middleman webservice for this purpose. If not, then most likely this plugin is not the right one for you!
 
 = Overview =
 
