@@ -13,7 +13,7 @@ Allow your visitors to comment and login with social networks and identities pro
 
 * This plugin is still in **alpha stage** and as such, should be used for **testing only**.
 * This plugin is tested default installation of WordPress with no extra add-ons.
-* This plugin is is for peoples who don't fancy the idea of having a middleman webservice for this puropose. if not, then most likely this plugin is not the right one for you!
+* This plugin is for peoples who don't fancy the idea of having a middleman webservice for this puropose. if not, then most likely this plugin is not the right one for you!
 
 = Overview =
 
