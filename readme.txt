@@ -15,8 +15,6 @@ Allow your visitors to comment and login with social networks and identities pro
 * This plugin is tested on a **default** installation of WordPress without any extra add-ons.
 * This plugin is for peoples who don't fancy the idea of having a middleman webservice for this purpose. If not, then most likely this plugin is not the right one for you!
 
-= Overview =
-
 WordPress Social Login plugin allow your visitors to comment and login with social networks and identities providers such as Twitter, Facebook, Google, Yahoo, LinkedIn, MySpace, Foursquare and AOL. 
 
 WordPress Social Login = Social Connect Plugin + HybridAuth Library + some hack and rework.
