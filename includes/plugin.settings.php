@@ -104,7 +104,15 @@ function wsl_render_settings()
 		<li>Basically this plugin can be extended to support many others providers such as Gowalla, Last.fm, Vimeo, Viadeo, Tumblr, QQ, Sina and maybe more,</li> 
 		<li>As an open source project and alpha stage plugin, We Appreciate Your <b>Feedback</b>. So far, working with the wordpress community is no fun :D, no jk :)</li> 
 		<li>If you run into any issue, or have a feature request, the best way to reach me is at <b>hybridauth@gmail.com</b> or on <a href="https://groups.google.com/forum/#%21forum/hybridauth-plugins">https://groups.google.com/forum/#!forum/hybridauth-plugins</a></li>
-	</ul> 
+		<li>
+			<b>Custom integration:</b>
+			<p style="margin-left:25px;margin:10px;">
+				WordPress Social Login will attempts to work with the default WordPress comment, login and registration forms. If you want to add the social login widget to another location in your theme, you can insert the following code in that location:
+			</p>
+
+			<pre style="width: 400px;background-color: #FFFFE0;border:1px solid #E6DB55; border-radius: 3px;padding: 10px;margin-left:10px;"> &lt;?php do_action( 'wordpress_social_login' ); ?&gt; </pre> 
+		</li>
+	</ul>
 	
 	<br /> 
 
@@ -120,15 +128,6 @@ function wsl_render_settings()
 
 	<br />
  
-	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Custom integration</h3> 
-	<p style="margin-left:25px;margin:10px;">
-		WordPress Social Login will attempts to work with the default WordPress comment, login and registration forms. If you want to add the social login widget to another location in your theme, you can insert the following code in that location:
-	</p>
-
-	<pre style="width: 400px;background-color: #FFFFE0;border:1px solid #E6DB55; border-radius: 3px;padding: 10px;margin-left:10px;"> &lt;?php do_action( 'wordpress_social_login' ); ?&gt; </pre>
-
-	<br />
-
 	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Providers setup</h3> 
 
 	<ul style="list-style:circle inside;margin-left:25px;">
