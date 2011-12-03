@@ -1,6 +1,10 @@
 <?php
 function wsl_render_login_form()
 {
+	if( ! comments_open() || is_user_logged_in()) {
+		return;
+	}
+	
 	GLOBAL $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG;
 
 	// display "Or connect with" message, or not.. ?
@@ -43,6 +47,7 @@ function wsl_render_login_form_login()
 add_action( 'login_form', 'wsl_render_login_form_login' );
 add_action( 'register_form', 'wsl_render_login_form_login' );
 add_action( 'after_signup_form', 'wsl_render_login_form_login' );
+add_action( 'wordpress_social_login', 'wsl_render_login_form_login' );
 
 function wsl_render_comment_form()
 {

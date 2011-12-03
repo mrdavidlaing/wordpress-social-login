@@ -56,8 +56,8 @@ define( 'WORDPRESS_SOCIAL_LOGIN_HYBRIDAUTH_ENDPOINT_URL', WORDPRESS_SOCIAL_LOGIN
  **/ 
 require_once(dirname (__FILE__) . '/includes/hybridauth.settings.php'); 
 require_once(dirname (__FILE__) . '/includes/plugin.settings.php'); 
-require_once(dirname (__FILE__) . '/includes/ui.php'); 
- 
+require_once(dirname (__FILE__) . '/includes/ui.php');  
+
 // ------------------------
 
 function wsl_process_login()

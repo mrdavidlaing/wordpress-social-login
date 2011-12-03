@@ -83,29 +83,18 @@ function wsl_render_settings()
 
 	<?php settings_fields( 'wsl-settings-group' ); ?>
 	
-	<h1 style="margin-bottom: 15px;">WordPress Social Login Settings</h1>  
+	<h2 style="margin-bottom: 15px;">WordPress Social Login Settings</h2>  
 
 	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Overview</h3> 
-	<p style="margin-left:25px;margin:10px;">
-		This plugin allow your visitors to register, login and comment with their accounts on social networks and identities providers such as Facebook, Twitter, Foursquare and Google.
+	<p style="margin-left:25px;margin:10px;"> 
+		This plugin allow your visitors to login and comment usiing their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, and AOL.
 	</p>
-	<p style="margin-left:25px;margin:10px;">
-		Currenty Supported Providers are :  
-		Facebook,
-		Google,
-		Yahoo,
-		Twitter,
-		Windows Live,
-		Myspace,
-		Foursquare,
-		Linkedin,
-		and AOL.  
-	</p> 
-
+	
 	<br />
+
 	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Important to know</h3> 
 	<p style="margin-left:25px;margin:10px;"> 
-		Well, it's quite a story :
+		Well, it's quite a story, please bear with me :
 	</p>
 	<ul style="list-style:circle inside;margin-left:25px;">
 		<li>This plugin is an <strong>Open Source</strong> project made on top of an open source Library for an open source CMS,</li>
@@ -117,9 +106,7 @@ function wsl_render_settings()
 		<li>If you run into any issue, or have a feature request, the best way to reach me is at <b>hybridauth@gmail.com</b> or on <a href="https://groups.google.com/forum/#%21forum/hybridauth-plugins">https://groups.google.com/forum/#!forum/hybridauth-plugins</a></li>
 	</ul> 
 	
-	<br />
-	
-	<br />
+	<br /> 
 
 	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Not scared yet? Let's get started!</h3>
 	<p style="margin-left:25px;margin:10px;text-align:center;"> 
@@ -132,7 +119,16 @@ function wsl_render_settings()
 	</p>
 
 	<br />
-	
+ 
+	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Custom integration</h3> 
+	<p style="margin-left:25px;margin:10px;">
+		WordPress Social Login will attempts to work with the default WordPress comment, login and registration forms. If you want to add the social login widget to another location in your theme, you can insert the following code in that location:
+	</p>
+
+	<pre style="width: 400px;background-color: #FFFFE0;border:1px solid #E6DB55; border-radius: 3px;padding: 10px;margin-left:10px;"> &lt;?php do_action( 'wordpress_social_login' ); ?&gt; </pre>
+
+	<br />
+
 	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Providers setup</h3> 
 
 	<ul style="list-style:circle inside;margin-left:25px;">

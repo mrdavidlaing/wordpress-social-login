@@ -26,6 +26,13 @@ Credits:
 3. Visit the "Settings | WP Social Login" administration page to configure social media providers.
 
 == Frequently Asked Questions ==
+= Do I need to add template tags to my theme? =
+
+WordPress Social Login will attempts to work with the default WordPress comment, login and registration forms.
+
+If you want to add the social login widget to another location in your theme, you can insert the following code in that location: 
+
+`<?php do_action( 'wordpress_social_login' ); ?>`
 
 = Where can I report bugs & get support? =
 
