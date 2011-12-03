@@ -2,7 +2,7 @@
 /*
 Plugin Name: WordPress Social Login
 Plugin URI: http://wordpress.org/extend/plugins/wordpress-social-login/
-Description: This plugin allow your visitors to register, login and comment with their accounts on social networks and identities providers such as Facebook, Twitter, Foursquare and Google. [<strong>Note</strong>:This plugin is still in Alpha Stage!!] 
+Description: Allow your visitors to login and comment with social networks and identities providers such as Facebook, Twitter and Google. [Alpha Stage!!] 
 Version: 1.1.3
 Author: Miled
 Author URI: http://wordpress.org/extend/plugins/wordpress-social-login/
@@ -28,7 +28,7 @@ function wsl_activate()
 			die( sprintf( __( "WordPress Social Login requires the <a href='http://www.php.net/manual/en/intro.curl.php'>PHP libcurl extension</a> to be installed." ) ) ); 
 		} 
 
-		if ( version_compare( PHP_VERSION, '5.2.0', '<' ) ){
+		if ( version_compare( PHP_VERSION, '5.2', '<' ) ){
 			die( sprintf( __( "WordPress Social Login requires WordPress 5.2 or newer." ) ) );
 		}
 	}
