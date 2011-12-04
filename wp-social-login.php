@@ -121,19 +121,19 @@ function wsl_process_login()
 			$hybridauth_user_profile = $adapter->getUserProfile();
 		}
 		else{
-			throw new Exception( 'User inconnected!' );
+			throw new Exception( 'User not connected with ' . $provider . '!' );
 		}
 
-		$user_login = $provider . "_" . md5( $hybridauth_user_profile->identifier ) ;
+		$user_login = strtolower( $provider ) . "_user_" . md5( $hybridauth_user_profile->identifier );
 		$user_email = $hybridauth_user_profile->email;
 
 		// generate an email if none
 		if( ! $user_email ){
-			$user_email = $user_login . "@example.com";
+			$user_email = $user_login . "@" . strtolower( $provider );
 		}
 	}
 	catch( Exception $e ){
-		die( $e->getMessage() ); 
+		die( "Unspecified error. #" . $e->getCode() ); 
 	}
 
 	// Get user by meta
