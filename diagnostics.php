@@ -44,7 +44,7 @@ session_start();
 	<p>
 <?php
 	if ( isset( $_SESSION["wsl::plugin"] ) ){
-		echo "<b style='color:green;'>OK!</b><br />PHP Sessions are working correctly."; 
+		echo "<b style='color:green;'>OK!</b><br />PHP Sessions are working correctly for {$_SESSION["wsl::plugin"]} to work."; 
 	}
 	else{ 
 		echo "<b style='color:red;'>FAIL!</b><br />PHP Sessions are not working correctly or this page has been accessed directly.";

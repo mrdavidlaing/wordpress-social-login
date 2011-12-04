@@ -10,7 +10,7 @@ License: GPL2
 */
 
 session_start(); 
-$_SESSION["wsl::plugin"] = "WordPress Social Login"; 
+$_SESSION["wsl::plugin"] = "WordPress Social Login 1.1.3"; 
 
 /**
  * Check technical requirements before activating the plugin.
