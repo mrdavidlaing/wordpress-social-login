@@ -9,6 +9,9 @@ Author URI: http://wordpress.org/extend/plugins/wordpress-social-login/
 License: GPL2
 */
 
+session_start(); 
+$_SESSION["wsl::plugin"] = "WordPress Social Login"; 
+
 /**
  * Check technical requirements before activating the plugin.
  * Wordpress 3.0 or newer required, 3.1 would be better

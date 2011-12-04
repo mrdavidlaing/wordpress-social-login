@@ -126,6 +126,7 @@ function wsl_render_settings()
 	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Not scared yet? Let's get started!</h3>
 	<p style="margin-left:25px;margin:10px;text-align:center;"> 
 		<br />
+		<br />
 		<a class="button-primary" href='<?php echo WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL ?>/help/index.html#settings' target='_blank'>Read the plugin user guide</a>
 		
 		&nbsp;&nbsp;&nbsp; 
