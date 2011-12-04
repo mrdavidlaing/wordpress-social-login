@@ -89,7 +89,15 @@ function wsl_render_settings()
 	<p style="margin-left:25px;margin:10px;"> 
 		This plugin allow your visitors to login and comment usiing their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, and AOL.
 	</p>
-	
+	<p style="margin-left:25px;margin:10px;"> 
+		This plugin's purposes are to:
+	</p>
+
+	<ul style="list-style:circle inside;margin-left:25px;">
+		<li>Provide an alternative to existing commercial and proprietary services,</li>
+		<li>If you are a designer or a web developer then you can improve, extend and customize it to your heart's content.</li> 
+	</ul>
+
 	<br />
 
 	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Important to know</h3> 
@@ -100,7 +108,6 @@ function wsl_render_settings()
 		<li>This plugin is an <strong>Open Source</strong> project made on top of an open source Library for an open source CMS,</li>
 		<li>This plugin is still in <strong>Alpha Stage</strong> and as such, should be used for <strong>testing only</strong> until a real stable release come to life,</li>
 		<li>This plugin is tested only on a <strong>default</strong> wordpress installation without any extra add-ons or tweak,</li>
-		<li>This plugin is for peoples who don't fancy the idea of having a middleman webservice for this purpose. If not, then most likely this plugin is not the right fit for you!</li>
 		<li>Basically this plugin can be extended to support many others providers such as Gowalla, Last.fm, Vimeo, Viadeo, Tumblr, QQ, Sina and maybe more,</li> 
 		<li>As an open source project and alpha stage plugin, We Appreciate Your <b>Feedback</b>. So far, working with the wordpress community is no fun :D, no jk :)</li> 
 		<li>If you run into any issue, or have a feature request, the best way to reach me is at <b>hybridauth@gmail.com</b> or on <a href="https://groups.google.com/forum/#%21forum/hybridauth-plugins">https://groups.google.com/forum/#!forum/hybridauth-plugins</a></li>
@@ -208,24 +215,24 @@ function wsl_render_settings()
 						</p>
 					<?php endif; ?> 
 
-					<?php if ( $provider_id == "myspace" ) : ?>
+					<?php if ( $provider_id == "MySpace" ) : ?>
 						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Put your website domain in the <b>External Url</b> and <b>External Callback Validation</b> fields. This should match with the current hostname <em style="color:#CB4B16;"><?php echo $_SERVER["SERVER_NAME"] ?></em>.</p>
 					<?php endif; ?> 
 
-					<?php if ( $provider_id == "live" ) : ?>
+					<?php if ( $provider_id == "Live" ) : ?>
 						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Put your website domain in the <b>Redirect Domain</b> field. This should match with the current hostname <em style="color:#CB4B16;"><?php echo $_SERVER["SERVER_NAME"] ?></em>.</p>
 					<?php endif; ?> 
 
-					<?php if ( $provider_id == "facebook" ) : ?>
+					<?php if ( $provider_id == "Facebook" ) : ?>
 						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Put your website domain in the <b>Site Url</b> field. This should match with the current hostname <em style="color:#CB4B16;"><?php echo $_SERVER["SERVER_NAME"] ?></em>.</p> 
 					<?php endif; ?>	
 
-					<?php if ( $provider_id == "linkedin" ) : ?>
+					<?php if ( $provider_id == "LinkedIn" ) : ?>
 						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Put your website domain in the <b>Integration URL</b> field. This should match with the current hostname <em style="color:#CB4B16;"><?php echo $_SERVER["SERVER_NAME"] ?></em>.</p> 
 						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Set the <b>Application Type</b> to <em style="color:#CB4B16;">Web Application</em>.</p> 
 					<?php endif; ?>	
 
-					<?php if ( $provider_id == "twitter" ) : ?>
+					<?php if ( $provider_id == "Twitter" ) : ?>
 						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Put your website domain in the <b>Application Website</b> and <b>Application Callback URL</b> fields. This should match with the current hostname <em style="color:#CB4B16;"><?php echo $_SERVER["SERVER_NAME"] ?></em>.</p> 
 						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Set the <b>Application Type</b> to <em style="color:#CB4B16;">Browser</em>.</p> 
 						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Set the <b>Default Access Type</b> to <em style="color:#CB4B16;">Read, Write, & Direct Messages</em>.</p> 
