@@ -123,7 +123,7 @@ function wsl_render_settings()
 	
 	<br /> 
 
-	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Not scared yet? Let's get started!</h3>
+	<h3 style="border-bottom: 1px solid #CCCCCC;margin:10px;">Let's get started</h3>
 	<p style="margin-left:25px;margin:10px;text-align:center;"> 
 		<br />
 		<br />
