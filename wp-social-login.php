@@ -170,8 +170,6 @@ function wsl_process_login()
 		// Create a new user
 		$user_id = wp_insert_user( $userdata );
 
-		print_r( $user_id );
-
 		// update user metadata
 		if( $user_id && is_integer( $user_id ) ){
 			update_user_meta( $user_id, $provider, $hybridauth_user_profile->identifier ); 
