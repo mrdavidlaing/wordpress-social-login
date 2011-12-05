@@ -1,5 +1,5 @@
 <p> 
-	Please click on the button bellow to make sure your server settings meet this plugin requirements:
+	Please click on the button below to make sure your server settings meet this plugin requirements:
 	
 	<br />
 	<br />
