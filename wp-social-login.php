@@ -27,14 +27,6 @@ function wsl_activate()
 		if ( ! function_exists( 'register_post_status' ) ){
 			die( sprintf( __( "WordPress Social Login requires WordPress 3.0 or newer." ) ) );
 		}
-
-		if ( !function_exists( 'curl_version' ) ){
-			die( sprintf( __( "WordPress Social Login requires the <a href='http://www.php.net/manual/en/intro.curl.php'>PHP libcurl extension</a> to be installed." ) ) ); 
-		} 
-
-		if ( version_compare( PHP_VERSION, '5.2', '<' ) ){
-			die( sprintf( __( "WordPress Social Login requires WordPress 5.2 or newer." ) ) );
-		}
 	}
 
 	do_action( 'wsl_activate' );
