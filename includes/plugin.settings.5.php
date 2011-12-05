@@ -1,5 +1,5 @@
 <p style="margin-left:25px;margin:10px;">  
-	If you run into any issue, or have a feature request, then the best way to reach me is at <b>hybridauth@gmail.com</b>
+	If you run into any issue, or have a feature request, the best way to reach me is at <b>hybridauth@gmail.com</b>
 	
 	<br />
 	<br />
