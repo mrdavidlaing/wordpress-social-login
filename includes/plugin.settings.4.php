@@ -1,3 +1,7 @@
+<form method="post" id="wsl_setup_form" action="options.php"> 
+
+	<?php settings_fields( 'wsl-settings-group' ); ?>
+
 <ul style="list-style:circle inside;">
 	<li style="color: #000000;font-size: 14px;">To correctly setup these Identity Providers please carefully follow the help section of each one.</li>
 	<li style="color: #000000;font-size: 14px;">If a <b>Provider Satus</b> is set to <b style="color:red">NO</b> then users will not be able to login with that provider on you website.</li>
@@ -119,3 +123,5 @@
 		<input type="submit" class="inputsave" value="Save" /> 
 	</div> 
 </div>
+
+</form>

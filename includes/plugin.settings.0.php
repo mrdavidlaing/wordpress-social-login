@@ -79,10 +79,9 @@
 <h2 class="nav-tab-wrapper">
 	<a class="nav-tab <?php if( $wslp == 1 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=1">Overview</a>
 	<a class="nav-tab <?php if( $wslp == 2 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=2">User guide</a>
-	<a class="nav-tab <?php if( $wslp == 3 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=3&url=http://www.example.com">Requirements Test</a>
+	<a class="nav-tab <?php if( $wslp == 3 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=3&url=http://www.example.com">Diagnostics</a>
 	<a class="nav-tab <?php if( $wslp == 4 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=4">Providers setup</a> 
-	<a class="nav-tab <?php if( $wslp == 5 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=5">Help and Support</a>
+	<a class="nav-tab <?php if( $wslp == 5 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=5">Customization</a> 
+	<a class="nav-tab <?php if( $wslp == 6 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=6">Support</a>
 </h2>
 
-<form method="post" id="wsl_setup_form" action="options.php"> 
-	<?php settings_fields( 'wsl-settings-group' ); ?>

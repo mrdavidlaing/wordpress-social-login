@@ -4,8 +4,15 @@ function wsl_render_login_form()
 	GLOBAL $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG;
 
 	// display "Or connect with" message, or not.. ?
+	
+	
+	$wsl_settings_connect_with_label = get_option( 'wsl_settings_connect_with_label' );
+	
+	if( empty( $wsl_settings_connect_with_label ) ){
+		$wsl_settings_connect_with_label = "Connect with:";
+	}
 ?>
-	<span id="wp-social-login-connect-with">Connect with:</span>
+	<span id="wp-social-login-connect-with"><?php echo $wsl_settings_connect_with_label ?></span>
 	<div id="wp-social-login-connect-options">
 <?php 
 	$nok = true;

@@ -30,4 +30,6 @@ function wsl_register_setting()
 			register_setting( 'wsl-settings-group', 'wsl_settings_' . $provider_id . '_app_secret' ); 
 		}
 	}
+	
+	register_setting( 'wsl-settings-group-customize', 'wsl_settings_connect_with_label' ); 
 }
