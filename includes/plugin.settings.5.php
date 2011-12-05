@@ -20,10 +20,23 @@
 	<input type="submit" value="Save" /> 
 </p>
 
-</form>
-
 <!--
-	more to come? meh maybe
+	more options to come? meh maybe
 -->
 
- 
+</form>
+
+<br />
+
+<h3>2. Preview</h3> 
+
+<p style="margin-left:25px;margin:10px;"> 
+	This is a preview of what should be on the comments section. <strong>Please do not test it here!<strong>
+</p>
+
+<div style="width: 600px;background-color: #FFFFE0;border:1px solid #E6DB55; border-radius: 3px;padding: 10px;margin-left:10px;">
+<?php 
+	wsl_render_login_form()
+?>
+</div>
+
