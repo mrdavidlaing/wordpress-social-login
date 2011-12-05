@@ -1,5 +1,5 @@
 <p style="margin-left:25px;margin:10px;"> 
-	This plugin allow your visitors to login and comment usiing their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, and AOL.
+	This plugin allow your visitors to login and comment using their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, and AOL.
 </p>
  
 <br />
