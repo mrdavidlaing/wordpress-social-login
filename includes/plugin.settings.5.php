@@ -17,21 +17,13 @@
 ?>
 	<input type="text" class="inputgnrc" value="<?php echo $wsl_settings_connect_with_label; ?>" name="wsl_settings_connect_with_label" >
  
-	<input type="submit" class="_inputsave" value="Save" /> 
+	<input type="submit" value="Save" /> 
 </p>
 
 </form>
 
-<br />
+<!--
+	more to come? meh maybe
+-->
 
-<h3>2. Custom integration</h3> 
-<p style="margin-left:25px;margin:10px;"> 
-	WordPress Social Login will attempts to work with the default WordPress comment, login and registration forms. 
-
-	<br /> 
-	<br /> 
-	If you want to add the social login widget to another location in your theme, you can insert the following code in that location:
-
-	<pre style="width: 400px;background-color: #FFFFE0;border:1px solid #E6DB55; border-radius: 3px;padding: 10px;margin-left:10px;"> &lt;?php do_action( 'wordpress_social_login' ); ?&gt; </pre> 
-</p>
  
