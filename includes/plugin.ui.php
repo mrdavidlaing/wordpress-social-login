@@ -8,22 +8,31 @@ function wsl_render_login_form()
 	<span id="wp-social-login-connect-with">Connect with:</span>
 	<div id="wp-social-login-connect-options">
 <?php 
+	$nok = true;
 
 	// display provider icons
 	foreach( $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG AS $item ){
 		$provider_id     = @ $item["provider_id"];
 		$provider_name   = @ $item["provider_name"];
 
-		$assets_base_url = WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . '/assets/img/32x32/';
- 
+		$assets_base_url = WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . '/assets/img/32x32/'; 
+
 		if( get_option( 'wsl_settings_' . $provider_id . '_enabled' ) ){
 			?>
 			<a href="javascript:void(0);" title="Connect with <?php echo $provider_name ?>" class="wsl_connect_with_provider" provider="<?php echo $provider_id ?>">
 				<img alt="<?php echo $provider_name ?>" title="<?php echo $provider_name ?>" src="<?php echo $assets_base_url . strtolower( $provider_id ) . '.png' ?>" />
 			</a>
 			<?php
-		} 
+
+			$nok = false;
+		}
 	} 
+
+	if( $nok ){
+		?>
+		<p style="background-color: #FFFFE0;border:1px solid #E6DB55;padding:5px;">No provider registered!<br />Please visit the <strong>Settings\ WP Social Login</strong> administration page to configure this plugin.</p>
+		<?php
+	}
 
 	// provide popup url for hybridauth callback
 	?>
@@ -90,3 +99,34 @@ function wsl_add_stylesheets(){
 
 add_action( 'login_head', 'wsl_add_stylesheets' );
 add_action( 'wp_head', 'wsl_add_stylesheets' );
+
+/**
+ * Display custom avatars
+ * borrowed from http://wordpress.org/extend/plugins/oa-social-login/
+ * thanks a million
+ */
+function wsl_user_custom_avatar ()
+{
+	global $comment;
+	$args = func_get_args ();
+
+	//Check if we are in a comment
+	if (!is_null ($comment) AND !empty ($comment->user_id) AND !empty ($args [0]))
+	{
+		//Read Thumbnail
+		if (($user_thumbnail = get_user_meta ($comment->user_id, 'wsl_user_image', true)) !== false)
+		{
+			if (strlen (trim ($user_thumbnail)) > 0)
+			{
+				$user_thumbnail = preg_replace ('#src=([\'"])([^\\1]+)\\1#Ui', "src=\\1" . $user_thumbnail . "\\1", $args [0]);
+				$user_thumbnail = preg_replace ('#height=([\'"])([^\\1]+)\\1#Ui', "", $user_thumbnail);
+				$user_thumbnail = preg_replace ('#width=([\'"])([^\\1]+)\\1#Ui', "", $user_thumbnail);
+				return $user_thumbnail;
+			}
+		}
+	}
+	return $args [0];
+}
+
+add_filter ( 'get_avatar', 'wsl_user_custom_avatar' );
+
