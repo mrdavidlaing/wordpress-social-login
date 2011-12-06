@@ -11,7 +11,8 @@ Allow your visitors to login and comment with social networks and identities pro
  
 This plugin incorporate social networks login/registration integration into your web site. Users will be able to login and comment using their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, and AOL.
 
-Credits: 
+Credits:
+
 - Social Connect plugin : http://wordpress.org/extend/plugins/social-connect/
 - HybridAuth Open Source Library: http://hybridauth.sourceforge.net/
 - Social icon set: http://www.wpzoom.com/wpzoom/500-free-icons-wpzoom-social-networking-icon-set/
