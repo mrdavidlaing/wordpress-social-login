@@ -35,6 +35,25 @@ function wsl_activate()
 register_activation_hook( __FILE__, 'wsl_activate' );
 
 /**
+ * Add a settings link to the Plugins page
+ * http://www.whypad.com/posts/wordpress-add-settings-link-to-plugins-page/785/
+ */
+function wsl_add_settings_link( $links, $file ){ 
+	static $this_plugin;
+
+	if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__);
+
+	if ( $file == $this_plugin ){
+		$settings_link = '<a href="options-general.php?page=wordpress-social-login">Settings</a>';
+		array_unshift( $links, $settings_link );
+	}
+
+	return $links;
+}
+
+add_filter( 'plugin_action_links', 'wsl_add_settings_link', 10, 2 ); 
+
+/**
  * This file only need to be included for versions before 3.1.
  * Deprecated since version 3.1, the functions are included by default
  */
