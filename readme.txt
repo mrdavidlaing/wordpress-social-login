@@ -3,7 +3,7 @@ Contributors: miled
 Tags:  twitter, facebook, google, yahoo, linkedin, myspace, foursquare, aol, login, register, comment, social, social networks, social login
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 
 Allow your visitors to login and comment with social networks and identities providers such as Facebook, Twitter and Google. [Alpha Stage!!] 
 
@@ -46,6 +46,12 @@ Also to get **help and support**, join us on the [discussion group](https://grou
 3. **Setup** - To correctly setup these Identity Providers please carefully follow the help section of each one.
 
 == Changelog ==
+
+= 1.1.5 =
+
+* Import users avatars
+* Fix an issue with unique emails.
+* Others small fixes
 
 = 1.1.4 =
 
