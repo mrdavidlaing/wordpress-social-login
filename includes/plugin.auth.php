@@ -63,7 +63,12 @@ function wsl_process_login()
 			throw new Exception( 'User not connected with ' . $provider . '!' );
 		}
 
-		$user_login = strtolower( $provider ) . "_user_" . md5( $hybridauth_user_profile->identifier );
+		$user_login = str_replace( ' ', '_', strtolower( $hybridauth_user_profile->displayName ) );
+
+		if( ! validate_username( $user_login ) ){
+			$user_login = strtolower( $provider ) . "_user_" . md5( $hybridauth_user_profile->identifier );
+		}
+
 		$user_email = $hybridauth_user_profile->email;
 		$user_image = $hybridauth_user_profile->photoURL;
 	}
@@ -80,25 +85,32 @@ function wsl_process_login()
 		$user_login = $user_data->user_login;
 	}
 
-	// User not found by provider identity, check by email
-	elseif( $user_id = email_exists( $user_email ) ){
-		$user_data  = get_userdata( $user_id );
-		$user_login = $user_data->user_login;
-	}
-
 	// Create new user and associate provider identity
 	else{
 		// generate an email if none
 		if ( ! isset ( $user_email ) OR ! is_email( $user_email ) ){
-			$user_email = $user_login . "@example.com";
+			$user_email = strtolower( $provider . "_user_" . $user_login ) . "@example.com";
 		}
 
-		// should be unique
+		// email should be unique
 		if ( email_exists ( $user_email ) ){
 			do
 			{
 				$user_email = md5(uniqid(wp_rand(10000,99000)))."@example.com";
 			} while( email_exists( $user_email ) );
+		}
+
+		// user name should be unique
+		if ( username_exists ( $user_login ) ){
+			$i = 1;
+			$user_login_tmp = $user_login;
+
+			do
+			{
+				$user_login_tmp = $user_login . "_" . ($i++);
+			} while (username_exists ($user_login_tmp));
+
+			$user_login = $user_login_tmp;
 		}
 
 		$userdata = array(
@@ -123,6 +135,8 @@ function wsl_process_login()
 			update_user_meta( $user_id, $provider, $hybridauth_user_profile->identifier ); 
 		}
 		else{
+			echo "<pre>";
+			print_r( array( $user_id, $userdata, $provider, $hybridauth_user_profile->identifier  ) );
 			die( "An error occurred while creating a new user!" );
 		}
 	}
