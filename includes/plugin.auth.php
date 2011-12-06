@@ -63,12 +63,6 @@ function wsl_process_login()
 			throw new Exception( 'User not connected with ' . $provider . '!' );
 		}
 
-		$user_login = str_replace( ' ', '_', strtolower( $hybridauth_user_profile->displayName ) );
-
-		if( ! validate_username( $user_login ) ){
-			$user_login = strtolower( $provider ) . "_user_" . md5( $hybridauth_user_profile->identifier );
-		}
-
 		$user_email = $hybridauth_user_profile->email;
 		$user_image = $hybridauth_user_profile->photoURL;
 	}
@@ -87,6 +81,13 @@ function wsl_process_login()
 
 	// Create new user and associate provider identity
 	else{
+		// generate a valid user login
+		$user_login = str_replace( ' ', '_', strtolower( $hybridauth_user_profile->displayName ) );
+
+		if( ! validate_username( $user_login ) ){
+			$user_login = strtolower( $provider ) . "_user_" . md5( $hybridauth_user_profile->identifier );
+		}
+
 		// generate an email if none
 		if ( ! isset ( $user_email ) OR ! is_email( $user_email ) ){
 			$user_email = strtolower( $provider . "_user_" . $user_login ) . "@example.com";
@@ -135,8 +136,6 @@ function wsl_process_login()
 			update_user_meta( $user_id, $provider, $hybridauth_user_profile->identifier ); 
 		}
 		else{
-			echo "<pre>";
-			print_r( array( $user_id, $userdata, $provider, $hybridauth_user_profile->identifier  ) );
 			die( "An error occurred while creating a new user!" );
 		}
 	}
