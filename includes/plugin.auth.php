@@ -88,19 +88,6 @@ function wsl_process_login()
 			$user_login = strtolower( $provider ) . "_user_" . md5( $hybridauth_user_profile->identifier );
 		}
 
-		// generate an email if none
-		if ( ! isset ( $user_email ) OR ! is_email( $user_email ) ){
-			$user_email = strtolower( $provider . "_user_" . $user_login ) . "@example.com";
-		}
-
-		// email should be unique
-		if ( email_exists ( $user_email ) ){
-			do
-			{
-				$user_email = md5(uniqid(wp_rand(10000,99000)))."@example.com";
-			} while( email_exists( $user_email ) );
-		}
-
 		// user name should be unique
 		if ( username_exists ( $user_login ) ){
 			$i = 1;
@@ -112,6 +99,19 @@ function wsl_process_login()
 			} while (username_exists ($user_login_tmp));
 
 			$user_login = $user_login_tmp;
+		}
+
+		// generate an email if none
+		if ( ! isset ( $user_email ) OR ! is_email( $user_email ) ){
+			$user_email = strtolower( $provider . "_user_" . $user_login ) . "@example.com";
+		}
+
+		// email should be unique
+		if ( email_exists ( $user_email ) ){
+			do
+			{
+				$user_email = md5(uniqid(wp_rand(10000,99000)))."@example.com";
+			} while( email_exists( $user_email ) );
 		}
 
 		$userdata = array(
