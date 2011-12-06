@@ -54,6 +54,7 @@
 		<ul style="list-style:circle inside;margin-left:25px;margin-top:10px;">
 			<li>The default css styles are found at <strong>/wordpress-social-login/assets/css/style.css</strong>. </li> 
 			<li>Social icons are found at <strong>/wordpress-social-login/assets/img/32x32/</strong>. These are made by WPZOOM.</li> 
+			<li>The widget view can be found at <strong>/wordpress-social-login/includes/plugin.ui.php</strong>, function <strong>wsl_render_login_form()</strong>.</li> 
 			<li>The popup and loading screens are found at <strong>/wordpress-social-login/authenticate.php</strong>.</li> 
 		</ul>
 	</li> 
