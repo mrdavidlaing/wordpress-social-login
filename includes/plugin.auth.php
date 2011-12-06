@@ -66,11 +66,6 @@ function wsl_process_login()
 		$user_login = strtolower( $provider ) . "_user_" . md5( $hybridauth_user_profile->identifier );
 		$user_email = $hybridauth_user_profile->email;
 		$user_image = $hybridauth_user_profile->photoURL;
-
-		// generate an email if none
-		if( ! $user_email ){
-			$user_email = $user_login . "@" . strtolower( $provider );
-		}
 	}
 	catch( Exception $e ){
 		die( "Unspecified error. #" . $e->getCode() ); 
@@ -93,6 +88,19 @@ function wsl_process_login()
 
 	// Create new user and associate provider identity
 	else{
+		// generate an email if none
+		if ( ! isset ( $user_email ) OR ! is_email( $user_email ) ){
+			$user_email = $user_login . "@example.com";
+		}
+
+		// should be unique
+		if ( email_exists ( $user_email ) ){
+			do
+			{
+				$user_email = md5(uniqid(wp_rand(10000,99000)))."@example.com";
+			} while( email_exists( $user_email ) );
+		}
+
 		$userdata = array(
 			'user_login'    => $user_login,
 			'user_email'    => $user_email,
@@ -115,11 +123,11 @@ function wsl_process_login()
 			update_user_meta( $user_id, $provider, $hybridauth_user_profile->identifier ); 
 		}
 		else{
-			die( "error!" );
+			die( "An error occurred while creating a new user!" );
 		}
 	}
 
-	if ( !empty( $user_image ) ){
+	if( ! empty( $user_image ) ){
 		update_user_meta ( $user_id, 'wsl_user_image', $user_image );
 	}
 
