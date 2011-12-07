@@ -127,16 +127,20 @@ function wsl_user_custom_avatar ()
 	//Check if we are in a comment
 	if (!is_null ($comment) AND !empty ($comment->user_id) AND !empty ($args [0]))
 	{
-		//Read Thumbnail
-		if (($user_thumbnail = get_user_meta ($comment->user_id, 'wsl_user_image', true)) !== false)
+		if( get_option ('wsl_settings_users_avatars') )
 		{
-			if (strlen (trim ($user_thumbnail)) > 0)
+			//Read Thumbnail
+			if (($user_thumbnail = get_user_meta ($comment->user_id, 'wsl_user_image', true)) !== false)
 			{
-				$user_thumbnail = preg_replace ('#src=([\'"])([^\\1]+)\\1#Ui', "src=\\1" . $user_thumbnail . "\\1", $args [0]); 
-				return $user_thumbnail;
+				if (strlen (trim ($user_thumbnail)) > 0)
+				{
+					$user_thumbnail = preg_replace ('#src=([\'"])([^\\1]+)\\1#Ui', "src=\\1" . $user_thumbnail . "\\1", $args [0]); 
+					return $user_thumbnail;
+				}
 			}
 		}
 	}
+
 	return $args [0];
 }
 

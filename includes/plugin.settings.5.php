@@ -16,19 +16,26 @@
 		$wsl_settings_connect_with_label = "Connect with:";
 	}
 ?>
-	<input type="text" class="inputgnrc" value="<?php echo $wsl_settings_connect_with_label; ?>" name="wsl_settings_connect_with_label" >
+	<input type="text" class="inputgnrc" style="padding: 4px;" value="<?php echo $wsl_settings_connect_with_label; ?>" name="wsl_settings_connect_with_label" >
     
     </td>
   </tr>
   <tr>
     <td><strong>Social icon set</strong></td>
+    <td> 
+		<select name="wsl_settings_social_icon_set">
+			<option <?php if( get_option( 'wsl_settings_social_icon_set' )   == "wpzoom" ) echo "selected"; ?>   value="wpzoom">WPZOOM social networking icon set</option>
+			<option <?php if( get_option( 'wsl_settings_social_icon_set' ) == "icondock" ) echo "selected"; ?> value="icondock">Icondock vector social media icons</option> 
+		</select> 
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Users avatars</strong></td>
     <td>
-    
-	<select name="wsl_settings_social_icon_set">
-		<option <?php if( get_option( 'wsl_settings_social_icon_set' )   == "wpzoom" ) echo "selected"; ?>   value="wpzoom">WPZOOM social networking icon set</option>
-		<option <?php if( get_option( 'wsl_settings_social_icon_set' ) == "icondock" ) echo "selected"; ?> value="icondock">Icondock vector social media icons</option> 
-	</select>
-    
+		<select name="wsl_settings_users_avatars" style="width: 440px;">
+			<option <?php if( ! get_option( 'wsl_settings_users_avatars' ) ) echo "selected"; ?> value="0">Display the default users avatars</option> 
+			<option <?php if(   get_option( 'wsl_settings_users_avatars' ) ) echo "selected"; ?> value="1">Display users avatars from social networks when available</option>
+		</select> 
     </td>
   </tr>
   <tr>
