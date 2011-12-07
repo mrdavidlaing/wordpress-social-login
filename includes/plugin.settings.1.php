@@ -13,7 +13,7 @@
 	<li>This plugin is still in <strong>Alpha Stage<span style="color:red">*</span></strong> and as such, should be used for <strong>TESTING ONLY</strong> until a real stable release come to life,</li>
 	<li>This plugin is tested only on a <strong>default</strong> wordpress installation without any extra add-ons or tweak,</li>
 	<li>This plugin is made to provide an alternative to existing commercial and proprietary services,</li>
-	<li>Basically this plugin can be extended to support many others providers such as <del>Gowalla</del>, <del>Last.fm</del>, Vimeo, Viadeo, <del>Tumblr</del>, QQ, Sina and maybe more,</li> 
+	<li>Basically this plugin can be extended to support many others providers such as Vimeo, Viadeo, QQ, Sina and maybe more,</li> 
 	<li>We recommend you first read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> and to run the <a href="options-general.php?page=wordpress-social-login&wslp=3">requirements test</a>,</li>
 	<li>As an open source project and alpha stage plugin, We Appreciate Your <b>Feedback</b>!</li>  
 </ul>
