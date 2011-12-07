@@ -75,7 +75,7 @@
 }
 </style> 
 
-<h1 style="padding-bottom: 10px;">WordPress Social Login
+<h1 style="padding-bottom: 10px;">WordPress Social Login 
 <?php
 	if( get_option( 'wsl_settings_development_mode_enabled' ) ){
 		?>

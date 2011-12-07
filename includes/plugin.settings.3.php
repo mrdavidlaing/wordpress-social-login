@@ -31,7 +31,7 @@
 		<option <?php if(   get_option( 'wsl_settings_development_mode_enabled' ) ) echo "selected"; ?> value="1">Enabled</option>
 		<option <?php if( ! get_option( 'wsl_settings_development_mode_enabled' ) ) echo "selected"; ?> value="0">Disabled</option> 
 	</select>
-	<input type="submit" value="Save" />
+	<input type="submit" class="button-primary" value="Save" />
 </p>
 
 </form>

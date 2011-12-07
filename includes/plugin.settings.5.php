@@ -33,7 +33,7 @@
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><input type="submit" value="Save" /> </td>
+    <td><input type="submit" class="button-primary" value="Save" /> </td>
   </tr>
 </table>
 
