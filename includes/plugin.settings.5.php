@@ -1,3 +1,9 @@
+<style>
+#wsl_setup_form .inputgnrc, #wsl_setup_form select { 
+    font-size: 14px; 
+}
+</style>
+
 <form method="post" id="wsl_setup_form" action="options.php">  
 <?php settings_fields( 'wsl-settings-group-customize' ); ?>
 
