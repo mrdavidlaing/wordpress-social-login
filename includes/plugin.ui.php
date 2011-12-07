@@ -132,9 +132,7 @@ function wsl_user_custom_avatar ()
 		{
 			if (strlen (trim ($user_thumbnail)) > 0)
 			{
-				$user_thumbnail = preg_replace ('#src=([\'"])([^\\1]+)\\1#Ui', "src=\\1" . $user_thumbnail . "\\1", $args [0]);
-				$user_thumbnail = preg_replace ('#height=([\'"])([^\\1]+)\\1#Ui', "", $user_thumbnail);
-				$user_thumbnail = preg_replace ('#width=([\'"])([^\\1]+)\\1#Ui', "", $user_thumbnail);
+				$user_thumbnail = preg_replace ('#src=([\'"])([^\\1]+)\\1#Ui', "src=\\1" . $user_thumbnail . "\\1", $args [0]); 
 				return $user_thumbnail;
 			}
 		}
