@@ -2,12 +2,13 @@
 <?php settings_fields( 'wsl-settings-group-customize' ); ?>
 
 <h3>Basic Settings </h3> 
-<p style="margin:10px;"> 
-	Enter the caption to be displayed above the social network login buttons: 
 
-	<br />
-	<br />
 
+<table width="100%" border="0" cellpadding="5" cellspacing="5" >
+  <tr>
+    <td width="150"><strong>Connect with caption</strong></td>
+    <td>
+    
 <?php 
 	$wsl_settings_connect_with_label = get_option( 'wsl_settings_connect_with_label' );
 
@@ -16,13 +17,25 @@
 	}
 ?>
 	<input type="text" class="inputgnrc" value="<?php echo $wsl_settings_connect_with_label; ?>" name="wsl_settings_connect_with_label" >
- 
-	<input type="submit" value="Save" /> 
-</p>
-
-<!--
-	more options to come? meh maybe
--->
+    
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Social icon set</strong></td>
+    <td>
+    
+	<select name="wsl_settings_social_icon_set">
+		<option <?php if( get_option( 'wsl_settings_social_icon_set' )   == "wpzoom" ) echo "selected"; ?>   value="wpzoom">WPZOOM social networking icon set</option>
+		<option <?php if( get_option( 'wsl_settings_social_icon_set' ) == "icondock" ) echo "selected"; ?> value="icondock">Icondock vector social media icons</option> 
+	</select>
+    
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" value="Save" /> </td>
+  </tr>
+</table>
 
 </form>
 
@@ -54,12 +67,12 @@ WordPress Social Login will attempts to work with the default WordPress comment,
 	<br />
 	</li> 
 
-	<li>Also, if you are a developer or designer then you can customize it to your heart's content. 
+	<li>Also, if you are a developer or designer then you can customize it to your heart's content: 
 		<ul style="list-style:circle inside;margin-left:25px;margin-top:10px;">
-			<li>The default css styles are found at <strong>/wordpress-social-login/assets/css/style.css</strong>. </li> 
-			<li>Social icons are found at <strong>/wordpress-social-login/assets/img/32x32/</strong>. These are made by WPZOOM.</li> 
-			<li>The widget view can be found at <strong>/wordpress-social-login/includes/plugin.ui.php</strong>, function <strong>wsl_render_login_form()</strong>.</li> 
-			<li>The popup and loading screens are found at <strong>/wordpress-social-login/authenticate.php</strong>.</li> 
+			<li>The default css styles are found at <strong>/wordpress-social-login/assets/css/style.css</strong></li> 
+			<li>Social icons are found at <strong>/wordpress-social-login/assets/img/32x32/</strong></li> 
+			<li>The widget view can be found at <strong>/wordpress-social-login/includes/plugin.ui.php</strong>, function <strong>wsl_render_login_form()</strong></li> 
+			<li>The popup and loading screens are found at <strong>/wordpress-social-login/authenticate.php</strong></li> 
 		</ul>
 	</li> 
 </ul>

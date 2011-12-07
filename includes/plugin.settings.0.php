@@ -75,13 +75,21 @@
 }
 </style> 
 
-<h1 style="padding-bottom: 10px;">WordPress Social Login</h1>  
+<h1 style="padding-bottom: 10px;">WordPress Social Login
+<?php
+	if( get_option( 'wsl_settings_development_mode_enabled' ) ){
+		?>
+			<small style="color:red;font-size: 14px;">(Development Mode On)</small>
+		<?php
+	}
+?>
+</h1>  
 <h2 class="nav-tab-wrapper">
 	<a class="nav-tab <?php if( $wslp == 1 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=1">Overview</a>
-	<a class="nav-tab <?php if( $wslp == 2 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=2">User guide</a>
-	<a class="nav-tab <?php if( $wslp == 3 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=3">Diagnostics</a>
 	<a class="nav-tab <?php if( $wslp == 4 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=4">Providers setup</a> 
 	<a class="nav-tab <?php if( $wslp == 5 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=5">Customization</a> 
+	<a class="nav-tab <?php if( $wslp == 3 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=3">Diagnostics</a>
+	<a class="nav-tab <?php if( $wslp == 2 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=2">User guide</a>
 	<a class="nav-tab <?php if( $wslp == 6 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=6">Support</a>
 </h2>
 

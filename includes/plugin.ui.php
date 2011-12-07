@@ -19,7 +19,16 @@ function wsl_render_login_form()
 		$provider_id     = @ $item["provider_id"];
 		$provider_name   = @ $item["provider_name"];
 
-		$assets_base_url = WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . '/assets/img/32x32/'; 
+		$social_icon_set = get_option( 'wsl_settings_social_icon_set' );
+
+		if( empty( $social_icon_set ) ){
+			$social_icon_set = "wpzoom/";
+		}
+		else{
+			$social_icon_set .= "/";
+		}
+
+		$assets_base_url = WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . '/assets/img/32x32/' . $social_icon_set; 
 
 		if( get_option( 'wsl_settings_' . $provider_id . '_enabled' ) ){
 			?>
@@ -43,6 +52,7 @@ function wsl_render_login_form()
 		<input id="wsl_popup_base_url" type="hidden" value="<?php echo WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL; ?>/authenticate.php?" />
 		<input type="hidden" id="wsl_login_form_uri" value="<?php echo site_url( 'wp-login.php', 'login_post' ); ?>" />
 	</div>
+	<span id="wp-social-login-connecting-to"></span>
 <?php
 }
 

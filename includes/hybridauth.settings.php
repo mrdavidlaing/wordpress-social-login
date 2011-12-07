@@ -59,4 +59,30 @@ $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG = ARRAY(
 		"provider_name"     => "AOL", 
 		"new_app_link"      => NULL, 
 	)
+	,
+	ARRAY( 
+		"provider_id"       => "LastFM",
+		"provider_name"     => "Last.FM", 
+		"new_app_link"      => "http://www.lastfm.com/api/account", 
+	)
+	,
+	ARRAY( 
+		"provider_id"       => "Identica",
+		"provider_name"     => "Identica", 
+		"new_app_link"      => "http://identi.ca/settings/oauthapps/new", 
+	)
+	,
+	ARRAY( 
+		"provider_id"       => "Gowalla",
+		"provider_name"     => "Gowalla", 
+		"require_client_id" => TRUE,
+		"callback"          => TRUE,
+		"new_app_link"      => "http://gowalla.com/api/keys", 
+	)
+	,
+	ARRAY( 
+		"provider_id"       => "Tumblr",
+		"provider_name"     => "Tumblr", 
+		"new_app_link"      => "http://www.tumblr.com/oauth/apps", 
+	)
 );

@@ -2,7 +2,11 @@
 
 	<?php settings_fields( 'wsl-settings-group' ); ?>
 
-<ul style="list-style:circle inside;">
+<p style="margin:20px;">
+Except for OpenID providers, each social network and identities provider will require that you create an external application linking your Web site to theirs apis. These external applications ensures that users are logging into the proper Web site and allows identities providers to send the user back to the correct Web site after successfully authenticating their Accounts.
+</p>
+	
+<ul style="list-style:circle inside;margin-left:30px;">
 	<li style="color: #000000;font-size: 14px;">To correctly setup these Identity Providers please carefully follow the help section of each one.</li>
 	<li style="color: #000000;font-size: 14px;">If a <b>Provider Satus</b> is set to <b style="color:red">NO</b> then users will not be able to login with that provider on you website.</li>
 </ul>
