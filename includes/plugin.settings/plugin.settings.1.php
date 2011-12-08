@@ -53,9 +53,9 @@
     <h3 style="margin: 0 0 5px;">Important</h3>
 
 	<p style="line-height: 19px;">
-		<b>No provider registered yet!</b>
+		<b>No provider registered yet!</b> 
 		<br />
-		Please start by reading the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> and make sure to run the <a href="options-general.php?page=wordpress-social-login&wslp=3">requirements test</a>!
+		Please go to "Providers setup" to get started.
 	</p>
 </div>
 <?php
