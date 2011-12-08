@@ -72,7 +72,7 @@
 <p style="margin:10px;margin-top:30px;font-size: 14px;"> 
 	<strong>IMPORTANT</strong>:
 	<br />
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. This plugin is <b>NOT guaranteed NOT to work on every server</b>,
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. This plugin is <b>NOT guaranteed to work on every server</b>,
 	<!--  and definitely not by idly wishing :D -->
 	and worst, it will require some works on your side.
 	<br />
