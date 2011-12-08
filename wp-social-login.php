@@ -9,7 +9,7 @@ Author URI: http://wordpress.org/extend/plugins/wordpress-social-login/
 License: GPL2
 */
 
-session_start(); 
+@ session_start(); 
 
 $_SESSION["wsl::plugin"] = "WordPress Social Login 1.1.7"; 
 
@@ -25,6 +25,12 @@ function wsl_activate()
 	{
 		deactivate_plugins (basename (dirname (__FILE__)) . '/' . basename (__FILE__));
 		die( "This plugin requires WordPress 3.0 or newer. Please update your WordPress installation to activate this plugin." );
+	}
+
+	if ( ! session_id() )
+	{
+		deactivate_plugins (basename (dirname (__FILE__)) . '/' . basename (__FILE__));
+		die( "This plugin requires the <a href='http://www.php.net/manual/en/book.session.php'>PHP Sessions</a> to be enabled." );
 	}
 
 	if ( ! function_exists ( 'curl_version' ) )
