@@ -73,10 +73,10 @@
 	<strong>IMPORTANT</strong>:
 	<br />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. This plugin is <b>NOT guaranteed</b> to work on every server,
-	<!--  and definitely not by idly wishing :D -->  
-	and will require some works on your side.
+	<!--  and definitely not by idly wishing :D -->
+	and will also require some works on your side.
 	<br />
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Please take a minute to read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> and make sure to run the <a href="options-general.php?page=wordpress-social-login&wslp=3">Requirements Test</a>,
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Please take a minute to read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> and make sure to run the <a href="options-general.php?page=wordpress-social-login&wslp=3">Requirements Test</a> before.
 	<br />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. If you run into any issue, or have a feature request, the best way to reach me is at <b>hybridauth@gmail.com</b>
 </p>
