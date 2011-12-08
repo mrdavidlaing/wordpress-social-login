@@ -1,3 +1,7 @@
+<?php
+	global $wpdb;
+?>
+
 <p style="margin:10px;font-size: 14px;"> 
 	<strong>WordPress Social Login</strong> is introducing a new feature to give you some insight into users registration by provider, gender and age. Or what should be better than nothing!
 </p>
@@ -6,9 +10,7 @@
 	<table width="80%">
 		<tr>
 		<td valign="top">
-		<?php
-			global $wpdb;
-
+		<?php 
 			$sql = "SELECT meta_value, count( * ) as items FROM `wp_usermeta` where meta_key = 'wsl_user' group by meta_value order by items desc ";
 
 			$rs = $wpdb->get_results( $sql );  
@@ -37,9 +39,7 @@
 		</td>
 		<td valign="top">
 
-		<?php
-			global $wpdb;
-
+		<?php 
 			$sql = "SELECT meta_value, count( * ) as items FROM `wp_usermeta` where meta_key = 'wsl_user_gender' group by meta_value order by items desc "; 
 
 			$rs = $wpdb->get_results( $sql ); 
@@ -66,9 +66,7 @@
 		</td>
 		<td valign="top">
 
-		<?php
-			global $wpdb;
-
+		<?php 
 			$sql = "SELECT meta_value, count( * ) as items FROM `wp_usermeta` where meta_key = 'wsl_user_age' group by meta_value order by items desc limit 21"; 
 
 			$rs = $wpdb->get_results( $sql ); 
