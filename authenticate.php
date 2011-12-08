@@ -102,6 +102,13 @@ function init() {
 				case 3 : $message = "Unknown or disabled provider."; break;
 				case 4 : $message = "Missing provider application credentials."; break;
 				case 5 : $message = "Authentification failed. The user has canceled the authentication or the provider refused the connection."; break; 
+				case 6 : $message = "User profile request failed. Most likely the user is not connected to the provider and he should to authenticate again."; 
+					     $adapter->logout();
+					     break;
+				case 7 : $message = "User not connected to the provider."; 
+					     $adapter->logout();
+					     break;
+				case 8 : $message = "Provider does not support this feature."; break;
 			}
 ?>
 <style> 
