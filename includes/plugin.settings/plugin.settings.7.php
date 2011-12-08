@@ -3,7 +3,7 @@
 ?>
 
 <p style="margin:10px;font-size: 14px;"> 
-	<strong>WordPress Social Login</strong> is introducing a new feature to give you some insight into users registration by provider, gender and age. Or what should be better than nothing!
+	<strong>WordPress Social Login</strong> is introducing a new feature to give you some basic insight into users registration by provider, gender and age. 
 </p>
 
 <center>

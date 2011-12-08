@@ -27,6 +27,7 @@
 	padding: 10px;      
 }
 </style>
+
 <div class="wsl_help wsl_aside">
     <h3 style="margin: 0 0 5px;">Need Help?</h3>
 
@@ -65,20 +66,33 @@
 	<strong>WordPress Social Login</strong> allow your visitors to login and comment using their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, Gowalla, Last.fm, Tumblr and AOL. 
 </p>
 
+<!--  
+	 if I haven't been clear enough yet :
+--> 
+<p style="margin:10px;margin-top:30px;font-size: 14px;"> 
+	<strong>IMPORTANT</strong>:
+	<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Please start by reading the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> and make sure to run the <a href="options-general.php?page=wordpress-social-login&wslp=3">Requirements Test</a>,
+	<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. This plugin is <b>NOT guaranteed</b> to work on every server and definitely not by idly wishing, <!-- :D --> 
+	<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. If you run into any issue, or have a feature request, the best way to reach me is at <b>hybridauth@gmail.com</b>
+</p>
+
 <div style="margin-top:30px;">
 	<p style="margin:10px;font-size: 14px;">  
-		If what you looking for is a
+		Features:
 	</p>
 
-	<ol style="margin-left:65px;font-size: 14px;">
-		<li><strong>free</strong>, <strong>unlimited</strong>,</li> 
-		<li><strong>white label</strong>, <strong>customizable</strong>,</li> 
-		<li><strong>social sign on solution</strong>,</li> 
-		<li>with <strong>data kept in house</strong></li> 
-	</ol>
+	<ul style="list-style:circle inside;margin-left:65px;font-size: 14px;">
+		<li>free, unlimited,</li> 
+		<li>white label, customizable,</li> 
+		<li>social sign on solution,</li> 
+		<li>with data kept in house</li> 
+	</ul>
 
 	<p style="margin:10px;margin-top:20px;font-size: 14px;">  
-		Then getting started should be as easy as
+		To get started:
 	</p>
 
 	<ol style="margin-left:65px;font-size: 14px;">

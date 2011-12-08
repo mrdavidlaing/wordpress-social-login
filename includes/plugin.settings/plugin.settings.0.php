@@ -100,9 +100,10 @@
 	<a class="nav-tab <?php if( $wslp == 1 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=1">Overview</a>
 	<a class="nav-tab <?php if( $wslp == 4 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=4">Providers setup</a> 
 	<a class="nav-tab <?php if( $wslp == 5 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=5">Customize</a>   
-	<a class="nav-tab <?php if( $wslp == 7 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=7">Insights</a>  	 
+	<a class="nav-tab <?php if( $wslp == 7 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=7">Insights</a>  
+<!-- 
 	<a class="nav-tab <?php if( $wslp == 6 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=6">Support</a> 
-
+-->
 	<?php if( $wslp == 2 ){ ?>
 		<a class="nav-tab nav-tab-active" href="options-general.php?page=wordpress-social-login&wslp=2">User guide</a>
 	<?php } ?>
