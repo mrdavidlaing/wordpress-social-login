@@ -78,7 +78,7 @@
 	<br />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Please start by reading the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> and make sure to run the <a href="options-general.php?page=wordpress-social-login&wslp=3">Requirements Test</a>.
 	<br />
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. If you run into any issue, please feel free to contact me at <b>hybridauth@gmail.com</b>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. If you run into any issue, feel free to contact me at <b>hybridauth@gmail.com</b>
 </p>
 
 <div style="margin-top:30px;">
