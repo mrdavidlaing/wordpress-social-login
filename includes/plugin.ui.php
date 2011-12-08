@@ -10,9 +10,7 @@ function wsl_render_login_form()
 	}
 ?>
 
-<!-- wsl_render_login_form
-WordPress Social Login Plugin, B7, http://wordpress.org/extend/plugins/wordpress-social-login/
--->
+<!-- wsl_render_login_form, WordPress Social Login Plugin, B7 -->
 	<span id="wp-social-login-connect-with"><?php echo $wsl_settings_connect_with_label ?></span>
 	<div id="wp-social-login-connect-options">
 <?php 
