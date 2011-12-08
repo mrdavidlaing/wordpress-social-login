@@ -1,18 +1,26 @@
+<div style="margin-left:10px;">
 <h3>1. Install</h3> 
 
 <ol>
 	<li>Download, Unzip and drop the extention on <b>/wp-content/plugins/</b> directory,</li>
 	<li>As admistration, activate the plugin through the 'Plugins' menu in WordPress,</li>  
+	<li>Visit the <strong>Settings\ WP Social Login</strong> to get started,</li>  
+	<li>Run the <b><a href="options-general.php?page=wordpress-social-login&wslp=3">requirements test</a></b> to make sure your server settings meet this plugin requirements,</li>
 </ol>  
 
 <br />
 
 <h3>2. Configure</h3> 
 
-<ol style="list-style:circle inside;margin-left:25px;">
-	<li>Got to <b>Diagnostics</b> tab and run the <b>requirements test</b> to make sure your server settings meet this plugin requirements,</li>
-	<li>Then setup the providers you want to use.</li>
+<p style="margin-left:25px;margin:10px;"> 
+Except few, each provider will require that you create an external application linking your Web site to theirs apis. These external applications ensures that users are logging into the proper Web site and allows identities providers to send the user back to the correct Web site after successfully authenticating their Accounts. 
+</p>
+
+<ol style="list-style:circle inside;margin-left:25px;"> 
+	<li>Visit the <strong>Providers setup</strong> section to setup the social networks you want to use.</li>
 </ol>
+
+<br />
 
 <div style="text-align: center;"><img src="<?php echo WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL ?>/screenshot-3.png" ></div>
 
@@ -57,3 +65,4 @@
 
 	<pre style="width: 400px;background-color: #FFFFE0;border:1px solid #E6DB55; border-radius: 3px;padding: 10px;margin-left:10px;"> &lt;?php do_action( 'wordpress_social_login' ); ?&gt; </pre> 
 </p>
+</div>

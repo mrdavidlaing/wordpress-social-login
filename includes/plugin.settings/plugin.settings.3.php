@@ -1,3 +1,4 @@
+<div style="margin-left:10px;">
 <form method="post" id="wsl_setup_form" action="options.php">  
 <?php settings_fields( 'wsl-settings-group-development' ); ?>
 
@@ -35,3 +36,4 @@
 </p>
 
 </form>
+</div>

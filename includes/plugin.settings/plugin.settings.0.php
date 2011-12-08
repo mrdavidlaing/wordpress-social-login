@@ -73,9 +73,21 @@
 #wsl_setup_form p {
 	font-size: 14px;
 }
+.wsl_label_notice {
+    background-color: #BFBFBF; 
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    font-size: 9.75px;
+    font-weight: bold;
+    padding: 1px 3px 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
 </style> 
 
-<h1 style="padding-bottom: 10px;">WordPress Social Login 
+<h2 style="padding-bottom: 10px;">WordPress Social Login 
+	<span class="wsl_label_notice">Beta</span>
+	
 <?php
 	if( get_option( 'wsl_settings_development_mode_enabled' ) ){
 		?>
@@ -83,13 +95,25 @@
 		<?php
 	}
 ?>
-</h1>  
+</h2>  
 <h2 class="nav-tab-wrapper">
 	<a class="nav-tab <?php if( $wslp == 1 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=1">Overview</a>
 	<a class="nav-tab <?php if( $wslp == 4 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=4">Providers setup</a> 
-	<a class="nav-tab <?php if( $wslp == 5 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=5">Customization</a> 
-	<a class="nav-tab <?php if( $wslp == 3 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=3">Diagnostics</a>
-	<a class="nav-tab <?php if( $wslp == 2 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=2">User guide</a>
-	<a class="nav-tab <?php if( $wslp == 6 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=6">Support</a>
+	<a class="nav-tab <?php if( $wslp == 5 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=5">Customize</a>  
+
+<!--
+	<a class="nav-tab <?php if( $wslp == 7 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=7">Insights</a>  	
+-->
+
+	<a class="nav-tab <?php if( $wslp == 6 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=6">Support</a> 
+
+	<?php if( $wslp == 2 ){ ?>
+		<a class="nav-tab nav-tab-active" href="options-general.php?page=wordpress-social-login&wslp=2">User guide</a>
+	<?php } ?>
+
+	<?php if( $wslp == 3 ){ ?>
+		<a class="nav-tab nav-tab-active" href="options-general.php?page=wordpress-social-login&wslp=3">Diagnostics</a>
+	<?php } ?>
+
 </h2>
 
