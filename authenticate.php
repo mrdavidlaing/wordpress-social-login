@@ -138,7 +138,7 @@ HR {
     <td align="center"> 
 		<div style="padding: 5px;margin: 5px;background: none repeat scroll 0 0 #F5F5F5;border-radius:3px;">
 			<div id="bug_report">
-				<form method="post" action="http://hybridauth.sourceforge.net/reports/index.php?product=wp-plugin&v=1.1.6">
+				<form method="post" action="http://hybridauth.sourceforge.net/reports/index.php?product=wp-plugin&v=1.1.7">
 					<table width="90%" border="0">
 						<tr>
 							<td align="left" valign="top"> 
@@ -159,7 +159,7 @@ HR {
 						<tr>
 							<td align="center" valign="top"> 
 								<hr /> 
-								&nbsp;<b>This plugin is still in alpha</b><br /><br /><b style="color:#cc0000;">But you can make it better by sending the generated error report to the developer!</b>
+								&nbsp;<b>This plugin is still on beta</b><br /><br /><b style="color:#cc0000;">But you can make it better by sending the generated error report to the developer!</b>
 								<br />
 								<br />
 								<input type="submit" style="width: 300px;height: 33px;" value="Send the error report" /> 
