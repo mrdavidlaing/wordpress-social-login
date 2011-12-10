@@ -41,7 +41,8 @@
     <h3 style="margin: 0 0 5px;">Need Help?</h3>
 
 	<p style="line-height: 19px;">
-		If you are still new to things, we recommend that you read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a>.
+		If you are still new to things, we recommend that you read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> 
+		and to make sure your server settings meet this <a href="options-general.php?page=wordpress-social-login&amp;wslp=3">plugin requirements</a>,
 	</p>
 </div> 
 
@@ -72,7 +73,7 @@
 	<p style="line-height: 19px;">
 		<b>No provider registered yet!</b> 
 		<br />
-		Please go to <a href="options-general.php?page=wordpress-social-login&wslp=4">Providers setup</a> tab to get started.
+		Please go to <a href="options-general.php?page=wordpress-social-login&wslp=4">Providers setup</a> to get started.
 	</p>
 </div>
 <?php
@@ -88,7 +89,7 @@
 	<p style="line-height: 19px;">
 		<b>Development Mode is On</b> 
 		<br />
-		Its recommend to <b style="color:red">disabled</b> the <a href="options-general.php?page=wordpress-social-login&wslp=3">development mode </a> on production. 
+		Its recommend to <b style="color:red">disable</b> the <a href="options-general.php?page=wordpress-social-login&wslp=3">development mode </a> on production. 
 	</p>
 </div>
 <?php
