@@ -17,6 +17,15 @@
 	border-radius: 3px;
 	padding: 10px; 
 }
+.wsl_notice {
+    line-height: 1;
+    padding: 8px;
+
+	background-color: #eaffdc;
+	border:1px solid #60cf4e; 
+	border-radius: 3px;
+	padding: 10px;      
+}
 .wsl_alert {
     line-height: 1;
     padding: 8px;
@@ -35,6 +44,14 @@
 		If you are still new to things, we recommend that you read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a>.
 	</p>
 </div> 
+
+<div style="clear:both" class="wsl_notice wsl_aside">
+    <h3 style="margin: 0 0 5px;">Need Support?</h3>
+
+	<p style="line-height: 19px;">
+		If you run into any issue, feel free to contact me at <b>hybridauth@gmail.com</b>
+	</p>
+</div>
 
 <?php 
 	$nok = true;
@@ -55,7 +72,23 @@
 	<p style="line-height: 19px;">
 		<b>No provider registered yet!</b> 
 		<br />
-		Please go to "Providers setup" to get started.
+		Please go to <a href="options-general.php?page=wordpress-social-login&wslp=4">Providers setup</a> tab to get started.
+	</p>
+</div>
+<?php
+	}
+?>
+
+<?php  
+	if( get_option( 'wsl_settings_development_mode_enabled' ) ){
+?>
+<div style="clear:both" class="wsl_alert wsl_aside">
+    <h3 style="margin: 0 0 5px;">Warning</h3>
+
+	<p style="line-height: 19px;">
+		<b>Development Mode is On</b> 
+		<br />
+		Its recommend to <b style="color:red">disabled</b> the <a href="options-general.php?page=wordpress-social-login&wslp=3">development mode </a> on production. 
 	</p>
 </div>
 <?php
@@ -68,7 +101,7 @@
 
 <!--  
 	if I haven't been clear enough yet :
---> 
+
 <p style="margin:10px;margin-top:30px;font-size: 14px;"> 
 	<strong>IMPORTANT</strong>:
 	<br />
@@ -78,11 +111,12 @@
 	<!--  
 	and worst, it will require some works on your side.
 	<br />
-	-->
+	 
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please start by reading the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> and make sure to run the <a href="options-general.php?page=wordpress-social-login&wslp=3">Requirements Test</a>.
 	<br />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you run into any issue, feel free to contact me at <b>hybridauth@gmail.com</b>
 </p>
+--> 
 
 <div style="margin-top:30px;">
 	<p style="margin:10px;font-size: 14px;">  
@@ -90,6 +124,7 @@
 	</p>
 
 	<ul style="list-style:circle inside;margin-left:65px;font-size: 14px;">
+		<li>open source,</li> 
 		<li>free, unlimited,</li> 
 		<li>white label, customizable,</li> 
 		<li>social sign on solution,</li> 
