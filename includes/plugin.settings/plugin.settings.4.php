@@ -1,3 +1,58 @@
+<style>
+.wsl_aside { 
+    float: right;
+    margin: 6px; 
+    margin-top:0px;
+    margin-right:10px;
+    position: relative;
+    width: 250px;
+    z-index: 200;
+} 
+.wsl_help {
+    line-height: 1;
+    padding: 8px;
+	
+	background-color: #FFFFE0;
+	border:1px solid #E6DB55; 
+	border-radius: 3px;
+	padding: 10px; 
+}
+.wsl_notice {
+    line-height: 1;
+    padding: 8px;
+
+	background-color: #eaffdc;
+	border:1px solid #60cf4e; 
+	border-radius: 3px;
+	padding: 10px;      
+}
+.wsl_alert {
+    line-height: 1;
+    padding: 8px;
+
+	background-color: #FFEBE8;
+	border:1px solid #CC0000; 
+	border-radius: 3px;
+	padding: 10px;      
+}
+</style>
+
+<div class="wsl_help wsl_aside">
+    <h3 style="margin: 0 0 5px;">Need Help?</h3>
+
+	<p style="line-height: 19px;">
+		If you are still new to things, we recommend that you read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a>.
+	</p>
+</div> 
+
+<div style="clear:both" class="wsl_notice wsl_aside">
+    <h3 style="margin: 0 0 5px;">Need Support?</h3>
+
+	<p style="line-height: 19px;">
+		If you run into any issue, feel free to contact me at <b>hybridauth@gmail.com</b>
+	</p>
+</div>
+
 <form method="post" id="wsl_setup_form" action="options.php"> 
 
 	<?php settings_fields( 'wsl-settings-group' ); ?>
