@@ -40,7 +40,7 @@
 <div class="wsl_help wsl_aside">
     <h3 style="margin: 0 0 5px;">Need Help?</h3>
 
-	<p style="line-height: 19px;">
+	<p style="line-height: 19px;" align="justify">
 		If you are still new to things, we recommend that you read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> 
 		and to make sure your server settings meet this <a href="options-general.php?page=wordpress-social-login&amp;wslp=3">Plugin Requirements</a>.
 	</p>
@@ -58,7 +58,7 @@
 
 	<?php settings_fields( 'wsl-settings-group' ); ?>
 
-<p style="margin:20px;">
+<p style="margin:10px;line-height: 22px;" align="justify">
 Except for OpenID providers, each social network and identities provider will require that you create an external application linking your Web site to theirs apis. These external applications ensures that users are logging into the proper Web site and allows identities providers to send the user back to the correct Web site after successfully authenticating their Accounts.
 </p>
 	

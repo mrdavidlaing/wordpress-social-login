@@ -2,7 +2,63 @@
 #wsl_setup_form .inputgnrc, #wsl_setup_form select { 
     font-size: 14px; 
 }
+.wsl_aside { 
+    float: right;
+    margin: 6px; 
+    margin-top:0px;
+    margin-right:10px;
+    position: relative;
+    width: 250px;
+    z-index: 200;
+} 
+.wsl_help {
+    line-height: 1;
+    padding: 8px;
+	
+	background-color: #FFFFE0;
+	border:1px solid #E6DB55; 
+	border-radius: 3px;
+	padding: 10px; 
+}
+.wsl_notice {
+    line-height: 1;
+    padding: 8px;
+
+	background-color: #eaffdc;
+	border:1px solid #60cf4e; 
+	border-radius: 3px;
+	padding: 10px;      
+}
+.wsl_alert {
+    line-height: 1;
+    padding: 8px;
+
+	background-color: #FFEBE8;
+	border:1px solid #CC0000; 
+	border-radius: 3px;
+	padding: 10px;      
+}
 </style>
+<div style="margin-left:10px;">
+
+<div class="wsl_help wsl_aside">
+    <h3 style="margin: 0 0 5px;">Need Help?</h3>
+
+	<p style="line-height: 19px;" align="justify">
+		If you are still new to things, we recommend that you read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> 
+		and to make sure your server settings meet this <a href="options-general.php?page=wordpress-social-login&amp;wslp=3">Plugin Requirements</a>.
+	</p>
+</div> 
+
+<div style="clear:both" class="wsl_notice wsl_aside">
+    <h3 style="margin: 0 0 5px;">Need Support?</h3>
+
+	<p style="line-height: 19px;">
+		If you run into any issue, feel free to contact me at <b>hybridauth@gmail.com</b>
+	</p>
+</div>
+
+
 
 <form method="post" id="wsl_setup_form" action="options.php">  
 <?php settings_fields( 'wsl-settings-group-customize' ); ?>
@@ -10,9 +66,10 @@
 <h3>Basic Settings </h3> 
 
 
-<table width="100%" border="0" cellpadding="5" cellspacing="5" >
+<table width="700" border="0" cellpadding="5" cellspacing="2" >
+
   <tr>
-    <td width="150"><strong>Connect with caption</strong></td>
+    <td width="135" align="right"><strong>Connect with caption :</strong></td>
     <td>
     
 <?php 
@@ -22,28 +79,50 @@
 		$wsl_settings_connect_with_label = "Connect with:";
 	}
 ?>
-	<input type="text" class="inputgnrc" style="padding: 4px;" value="<?php echo $wsl_settings_connect_with_label; ?>" name="wsl_settings_connect_with_label" >
+	<input type="text" class="inputgnrc" style="padding: 4px;width: 400px;" value="<?php echo $wsl_settings_connect_with_label; ?>" name="wsl_settings_connect_with_label" >
     
     </td>
   </tr>
+
   <tr>
-    <td><strong>Social icon set</strong></td>
+    <td align="right"><strong>Social icon set :</strong></td>
     <td> 
-		<select name="wsl_settings_social_icon_set">
+		<select name="wsl_settings_social_icon_set" style="width: 400px;">
 			<option <?php if( get_option( 'wsl_settings_social_icon_set' )   == "wpzoom" ) echo "selected"; ?>   value="wpzoom">WPZOOM social networking icon set</option>
 			<option <?php if( get_option( 'wsl_settings_social_icon_set' ) == "icondock" ) echo "selected"; ?> value="icondock">Icondock vector social media icons</option> 
 		</select> 
     </td>
   </tr>
+  
   <tr>
-    <td><strong>Users avatars</strong></td>
+    <td align="right"><strong>Users avatars :</strong></td>
     <td>
-		<select name="wsl_settings_users_avatars" style="width: 440px;">
+		<select name="wsl_settings_users_avatars" style="width: 400px;">
 			<option <?php if( ! get_option( 'wsl_settings_users_avatars' ) ) echo "selected"; ?> value="0">Display the default users avatars</option> 
 			<option <?php if(   get_option( 'wsl_settings_users_avatars' ) ) echo "selected"; ?> value="1">Display users avatars from social networks when available</option>
 		</select> 
     </td>
   </tr>
+
+<?php 
+	$wsl_settings_redirect_url = get_option( 'wsl_settings_redirect_url' );
+?> 
+<!--
+  <tr>
+    <td width="135" align="right" valign="top"><strong>Redirect URL :</strong></td>
+    <td> 
+		<select name="wsl_settings_users_avatars" style="width: 400px;">
+			<option value="0">Redirect users to the homepage</option> 
+			<option value="1">Redirect users to the dashboard</option>
+			<option value="2">Redirect users to the following url</option>
+		</select> 
+		<input type="text" class="inputgnrc" style="padding: 4px;width: 400px;" value="<?php echo $wsl_settings_redirect_url; ?>" name="wsl_settings_redirect_url" >
+		<br />
+		<small>Where should users be redirected to after having logged in with their social network account?</small>
+    </td>
+  </tr>
+-->
+
   <tr>
     <td>&nbsp;</td>
     <td><input type="submit" class="button-primary" value="Save" /> </td>
@@ -89,4 +168,4 @@ WordPress Social Login will attempts to work with the default WordPress comment,
 		</ul>
 	</li> 
 </ul>
-
+</div>

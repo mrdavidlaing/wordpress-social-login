@@ -97,6 +97,7 @@
 ?>
 </h2>  
 <h2 class="nav-tab-wrapper">
+	&nbsp;
 	<a class="nav-tab <?php if( $wslp == 1 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=1">Overview</a>
 	<a class="nav-tab <?php if( $wslp == 4 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=4">Providers setup</a> 
 	<a class="nav-tab <?php if( $wslp == 5 ) echo "nav-tab-active"; ?>" href="options-general.php?page=wordpress-social-login&wslp=5">Customize</a>   

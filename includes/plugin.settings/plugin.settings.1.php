@@ -40,7 +40,7 @@
 <div class="wsl_help wsl_aside">
     <h3 style="margin: 0 0 5px;">Need Help?</h3>
 
-	<p style="line-height: 19px;">
+	<p style="line-height: 19px;" align="justify">
 		If you are still new to things, we recommend that you read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> 
 		and to make sure your server settings meet this <a href="options-general.php?page=wordpress-social-login&amp;wslp=3">Plugin Requirements</a>.
 	</p>
@@ -96,32 +96,13 @@
 	}
 ?>
 
-<p style="margin:10px;font-size: 14px;"> 
+<p style="margin:10px;font-size: 14px;line-height: 22px;"> 
 	<strong>WordPress Social Login</strong> allow your visitors to login and comment using their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, Gowalla, Last.fm, Tumblr and AOL. 
 </p>
-
-<!--  
-	if I haven't been clear enough yet :
-
-<p style="margin:10px;margin-top:30px;font-size: 14px;"> 
-	<strong>IMPORTANT</strong>:
-	<br />
-	<!--
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. This plugin is NOT guaranteed to work on every server,
-	<!--  and definitely not by idly wishing :D -->
-	<!--  
-	and worst, it will require some works on your side.
-	<br />
-	 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please start by reading the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> and make sure to run the <a href="options-general.php?page=wordpress-social-login&wslp=3">Requirements Test</a>.
-	<br />
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you run into any issue, feel free to contact me at <b>hybridauth@gmail.com</b>
-</p>
---> 
-
-<div style="margin-top:30px;">
+ 
+<div style="margin-top:20px;">
 	<p style="margin:10px;font-size: 14px;">  
-		Features:
+		WordPress Social Login is:
 	</p>
 
 	<ul style="list-style:circle inside;margin-left:65px;font-size: 14px;">
