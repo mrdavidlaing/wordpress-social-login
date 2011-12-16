@@ -66,7 +66,7 @@
 <h3>Basic Settings </h3> 
 
 
-<table width="700" border="0" cellpadding="5" cellspacing="2" >
+<table width="600" border="0" cellpadding="5" cellspacing="2" >
 
   <tr>
     <td width="135" align="right"><strong>Connect with caption :</strong></td>
@@ -103,26 +103,7 @@
 		</select> 
     </td>
   </tr>
-
-<?php 
-	$wsl_settings_redirect_url = get_option( 'wsl_settings_redirect_url' );
-?> 
-<!--
-  <tr>
-    <td width="135" align="right" valign="top"><strong>Redirect URL :</strong></td>
-    <td> 
-		<select name="wsl_settings_users_avatars" style="width: 400px;">
-			<option value="0">Redirect users to the homepage</option> 
-			<option value="1">Redirect users to the dashboard</option>
-			<option value="2">Redirect users to the following url</option>
-		</select> 
-		<input type="text" class="inputgnrc" style="padding: 4px;width: 400px;" value="<?php echo $wsl_settings_redirect_url; ?>" name="wsl_settings_redirect_url" >
-		<br />
-		<small>Where should users be redirected to after having logged in with their social network account?</small>
-    </td>
-  </tr>
--->
-
+ 
   <tr>
     <td>&nbsp;</td>
     <td><input type="submit" class="button-primary" value="Save" /> </td>
