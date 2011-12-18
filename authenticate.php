@@ -5,6 +5,8 @@
 	if( isset( $_GET["provider"] ) && ! isset( $_GET["redirect_to_provider"] )){
 		// selected provider 
 		$provider = @ trim( strip_tags( $_GET["provider"] ) ); 
+
+		$_SESSION["HA::STORE"] = ARRAY(); 
 ?>
 <table width="100%" border="0">
   <tr>
