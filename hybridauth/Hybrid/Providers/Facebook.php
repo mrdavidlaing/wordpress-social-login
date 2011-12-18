@@ -15,7 +15,9 @@
 class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 {
 	// default permissions, and alot of them. You can change them from the configuration by setting the scope to what you want/need
-	public $scope = "email, user_about_me, user_birthday, user_hometown";
+	public $scope = "email, user_about_me, user_birthday, user_hometown, user_website, offline_access";
+	
+	public $display = "page";
 
 	/**
 	* IDp wrappers initializer 
@@ -29,6 +31,11 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
  		// override requested scope
 		if( isset( $this->config["scope"] ) && ! empty( $this->config["scope"] ) ){
 			$this->scope = $this->config["scope"];
+		}
+
+		// override requested display
+		if( isset( $this->config["display"] ) && ! empty( $this->config["display"] ) ){
+			$this->display = $this->config["display"];
 		}
 
 		require_once Hybrid_Auth::$config["path_libraries"] . "Facebook/base_facebook.php";
@@ -47,10 +54,10 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 	function loginBegin()
 	{
 		// get the login url 
-		$url = $this->api->getLoginUrl( array( 'scope' => $this->scope, 'redirect_uri' => $this->endpoint ) );
+		$url = $this->api->getLoginUrl( array( 'scope' => $this->scope, 'display' => $this->display, 'redirect_uri' => $this->endpoint ) );
 
 		// redirect to facebook
-		Hybrid_Auth::redirect( $url ); 
+		Hybrid_Auth::redirect( $url );
 	}
 
 	/**
@@ -74,7 +81,7 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 		// try to detect the access token for facebook
 		if( isset( $_SESSION["fb_" . $this->api->getAppId() . "_access_token" ] ) ){
 			$this->token( "access_token", $_SESSION["fb_" . $this->api->getAppId() . "_access_token" ] );
-		} 
+		}
 	}
 
 	/**
@@ -105,18 +112,19 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 			throw new Exception( "User profile request failed! {$this->providerId} api returned an invalid response.", 6 );
 		}
 
-		# store the user profile.  
-		$this->user->profile->identifier  = @ $data['id'];
-		$this->user->profile->displayName = @ $data['name'];
-		$this->user->profile->firstName   = @ $data['first_name'];
-		$this->user->profile->lastName    = @ $data['last_name'];
-		$this->user->profile->photoURL    = "https://graph.facebook.com/" . $this->user->profile->identifier . "/picture?type=square";
-		$this->user->profile->profileURL  = @ $data['link']; 
-		$this->user->profile->webSiteURL  = @ $data['website']; 
-		$this->user->profile->gender      = @ $data['gender'];
-		$this->user->profile->description = @ $data['bio'];
-		$this->user->profile->email       = @ $data['email'];
-		$this->user->profile->region      = @ $data['hometown']["name"];
+		# store the user profile.
+		$this->user->profile->identifier    = @ $data['id'];
+		$this->user->profile->displayName   = @ $data['name'];
+		$this->user->profile->firstName     = @ $data['first_name'];
+		$this->user->profile->lastName      = @ $data['last_name'];
+		$this->user->profile->photoURL      = "https://graph.facebook.com/" . $this->user->profile->identifier . "/picture?type=square";
+		$this->user->profile->profileURL    = @ $data['link']; 
+		$this->user->profile->webSiteURL    = @ $data['website']; 
+		$this->user->profile->gender        = @ $data['gender'];
+		$this->user->profile->description   = @ $data['bio'];
+		$this->user->profile->email         = @ $data['email'];
+		$this->user->profile->emailVerified = @ $data['email'];
+		$this->user->profile->region        = @ $data['hometown']["name"];
 
 		if( isset( $data['birthday'] ) ) {
 			list($birthday_month, $birthday_day, $birthday_year) = @ explode('/', $data['birthday'] );
@@ -169,7 +177,7 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 		$parameters = array();
 
 		if( is_array( $status ) ){
-			$parameters = $status; 
+			$parameters = $status;
 		}
 		else{
 			$parameters["message"] = $status; 

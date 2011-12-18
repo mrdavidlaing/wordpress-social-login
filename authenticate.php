@@ -18,7 +18,7 @@
   </tr> 
 </table>
 <script> 
-	setTimeout( function(){window.location.href = window.location.href + "&redirect_to_provider=ture"}, 750 );
+	setTimeout( function(){window.location.href = window.location.href + "&redirect_to_provider=true"}, 750 );
 </script>
 <?php
 		die();
@@ -61,6 +61,11 @@
 			// provider application secret ?
 			if( get_option( 'wsl_settings_' . $provider . '_app_secret' ) ){
 				$config["providers"][$provider]["keys"]["secret"] = get_option( 'wsl_settings_' . $provider . '_app_secret' );
+			}
+
+			// if facebook
+			if( strtolower( $provider ) == "facebook" ){
+				$config["providers"][$provider]["display"] = "popup";
 			}
 
 			// create an instance for Hybridauth

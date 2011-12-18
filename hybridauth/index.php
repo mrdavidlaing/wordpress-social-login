@@ -10,7 +10,9 @@
 // ------------------------------------------------------------------------
 
 // start a new session 
-session_start();
+if ( ! session_id() ){
+	session_start();
+}
 
 require_once( "Hybrid/Auth.php" );
 
@@ -56,7 +58,7 @@ if( isset( $_REQUEST["hauth_start"] ) || isset( $_REQUEST["hauth_done"] ) )
 		if( ! isset( $_SESSION["HA::CONFIG"] ) ): 
 			header("HTTP/1.0 404 Not Found");
 
-			die( "Sorry, this page cannot be accessed directly!" );
+			die( "You cannot access this page directly." );
 		endif; 
 
 		Hybrid_Auth::initialize( unserialize( $_SESSION["HA::CONFIG"] ) ); 
@@ -85,7 +87,7 @@ if( isset( $_REQUEST["hauth_start"] ) || isset( $_REQUEST["hauth_done"] ) )
 
 			header("HTTP/1.0 404 Not Found");
 
-			die( "Sorry, this page cannot be accessed directly!" );
+			die( "You cannot access this page directly." );
 		}
 
 		# define:hybrid.endpoint.php step 2.
@@ -123,12 +125,12 @@ if( isset( $_REQUEST["hauth_start"] ) || isset( $_REQUEST["hauth_done"] ) )
 	if( isset( $_REQUEST["hauth_done"] ) && $_REQUEST["hauth_done"] ) 
 	{
 		// Fix a strange behavior when some provider call back ha endpoint
-		// with /index.php?hauth.done={provider}?{args}...  
+		// with /index.php?hauth.done={provider}?{args}... 
 		if ( strrpos( $_SERVER["QUERY_STRING"], '?' ) )
 		{
 			$_SERVER["QUERY_STRING"] = str_replace( "?", "&", $_SERVER["QUERY_STRING"] );
 
-			parse_str( $_SERVER["QUERY_STRING"], $_REQUEST ); 
+			parse_str( $_SERVER["QUERY_STRING"], $_REQUEST );
 		}
 
 		$provider_id = trim( strip_tags( $_REQUEST["hauth_done"] ) );

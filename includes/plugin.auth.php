@@ -69,10 +69,19 @@ function wsl_process_login()
 		die( "Unspecified error. #" . $e->getCode() ); 
 	}
 
-	// Get user by meta
-	$user_id = wsl_get_user_by_meta( $provider, $hybridauth_user_profile->identifier );
+	$user_id = null;
 
-	// if user metadata found
+	// if the user email is verified, then try to map to legacy account if exist
+	if ( ! empty( $hybridauth_user_profile->emailVerified ) ){
+		$user_id = (int) email_exists( $hybridauth_user_profile->emailVerified );
+	}
+
+	// try to get user by meta if not
+	if( ! $user_id ){
+		$user_id = (int) wsl_get_user_by_meta( $provider, $hybridauth_user_profile->identifier ); 
+	}
+
+	// if user found
 	if( $user_id ){
 		$user_data  = get_userdata( $user_id );
 		$user_login = $user_data->user_login;
