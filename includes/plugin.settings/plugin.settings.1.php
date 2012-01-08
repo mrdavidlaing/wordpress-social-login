@@ -62,11 +62,11 @@
 
 <?php 
 	// let give this a try
-	// and only if we have if up and running
+	// and only if we have it up and running
 	global $wpdb;
 	$sql = "SELECT count( * ) as items FROM `wp_usermeta` where meta_key = 'wsl_user' "; 
 	$rs = $wpdb->get_results( $sql );  
-	if( count( $rs ) && $rs[0]->items >= 5 ){
+	if( count( $rs ) && $rs[0]->items >= 3 ){
 ?>
 <div style="clear:both;padding-bottom: 0;" class="wsl_donate wsl_aside">
     <h3 style="margin: 0 0 5px;">Donate</h3>
