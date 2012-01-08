@@ -19,19 +19,25 @@
 }
 .wsl_notice {
     line-height: 1;
-    padding: 8px;
-
-	background-color: #eaffdc;
-	border:1px solid #60cf4e; 
+    padding: 8px; 
+	background-color: #EDEFF4;
+	border:1px solid #6B84B4; 
 	border-radius: 3px;
 	padding: 10px;      
 }
 .wsl_alert {
     line-height: 1;
-    padding: 8px;
-
+    padding: 8px; 
 	background-color: #FFEBE8;
 	border:1px solid #CC0000; 
+	border-radius: 3px;
+	padding: 10px;      
+}
+.wsl_donate {
+    line-height: 1;
+    padding: 8px;
+	background-color: #eaffdc;
+	border:1px solid #60cf4e;  
 	border-radius: 3px;
 	padding: 10px;      
 }
@@ -53,6 +59,28 @@
 		If you run into any issue, feel free to contact me at <b>hybridauth@gmail.com</b>
 	</p>
 </div>
+
+
+<?php 
+	// let give this a try
+	// and only if we have if up and running
+	global $wpdb;
+	$sql = "SELECT count( * ) as items FROM `wp_usermeta` where meta_key = 'wsl_user' "; 
+	$rs = $wpdb->get_results( $sql );  
+	if( count( $rs ) && $rs[0]->items >= 5 ){
+?>
+<div style="clear:both;padding-bottom: 0;" class="wsl_donate wsl_aside">
+    <h3 style="margin: 0 0 5px;">Donate</h3>
+
+	<p style="line-height: 19px;">
+		If you like this plugin and find it useful, help keep this plugin free and actively developed by clicking the <a href='http://www.pledgie.com/campaigns/16545'>donate</a> button
+		
+		<a href='http://www.pledgie.com/campaigns/16545'><img style="padding:4px" alt='Click here to lend your support to: HybridAuth, open source social sign on php library and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/16545.png?skin_name=chrome' border='0' /></a>
+	</p>
+</div>
+<?
+	}
+?>
 
 <form method="post" id="wsl_setup_form" action="options.php"> 
 
