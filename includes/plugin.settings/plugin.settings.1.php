@@ -72,9 +72,19 @@
     <h3 style="margin: 0 0 5px;">Donate</h3>
 
 	<p style="line-height: 19px;">
-		If you like this plugin and find it useful, help keep this plugin free and actively developed by clicking the <a href='http://www.pledgie.com/campaigns/16545'>donate</a> button
-		
-		<a href='http://www.pledgie.com/campaigns/16545'><img style="padding:4px" alt='Click here to lend your support to: HybridAuth, open source social sign on php library and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/16545.png?skin_name=chrome' border='0' /></a>
+		If you like this plugin and find it useful, help keep this plugin free and actively developed by clicking the donate button
+
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		<input type="hidden" name="cmd" value="_donations">
+		<input type="hidden" name="business" value="hybridauth@gmail.com">
+		<input type="hidden" name="lc" value="US">
+		<input type="hidden" name="item_name" value="HybridAuth Project">
+		<input type="hidden" name="no_note" value="0">
+		<input type="hidden" name="currency_code" value="USD">
+		<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.paypalobjects.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
+		</form>
 	</p>
 </div>
 <?
