@@ -3,7 +3,7 @@ Contributors: miled
 Tags:  twitter, facebook, google, yahoo, linkedin, myspace, foursquare, aol, gowalla, last.fm, tumblr, login, register, comment, social, social networks, social login
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 
 Allow your visitors to login and comment with social networks and identities providers such as Facebook, Twitter and Google. [BETA PLUGIN!] 
 
@@ -39,10 +39,8 @@ If you want to add the social login widget to another location in your theme, yo
 
 = Where can I report bugs & get support? =
 
-As an open source project and alpha stage plugin, We Appreciate Your Feedback! 
-
-Also to get **help and support**, join us on the [discussion group](https://groups.google.com/forum/#!forum/hybridauth-plugins) or email me at &lt;hybridauth (at) gmail (dot) com&gt;
-
+As an open source project and beta stage plugin, We Appreciate Your Feedback! 
+ 
 == Screenshots ==
 
 1. **Comment** - Buttons for 3rd party services are also provided on the comment form.
