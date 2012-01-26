@@ -64,7 +64,7 @@
     <h3 style="margin: 0 0 5px;">Donate</h3>
 
 	<p style="line-height: 19px;">
-		If you like this plugin and find it useful, help keep this plugin free and actively developed by clicking the donate button
+		If you like this plugin and find it useful, help keep this plugin free and actively developed 
 
 		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 		<input type="hidden" name="cmd" value="_donations">
