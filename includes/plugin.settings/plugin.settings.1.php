@@ -59,15 +59,7 @@
 		If you run into any issue, feel free to contact me at <b>hybridauth@gmail.com</b>
 	</p>
 </div>
-
-<?php 
-	// let give this a try
-	// and only if we have it up and running
-	global $wpdb;
-	$sql = "SELECT count( * ) as items FROM `wp_usermeta` where meta_key = 'wsl_user' "; 
-	$rs = $wpdb->get_results( $sql );  
-	if( count( $rs ) && $rs[0]->items >= 3 ){
-?>
+ 
 <div style="clear:both;padding-bottom: 0;" class="wsl_donate wsl_aside">
     <h3 style="margin: 0 0 5px;">Donate</h3>
 
@@ -86,10 +78,7 @@
 		<img alt="" border="0" src="https://www.paypalobjects.com/fr_XC/i/scr/pixel.gif" width="1" height="1">
 		</form>
 	</p>
-</div>
-<?php
-	}
-?>
+</div> 
 
 <?php 
 	$nok = true;

@@ -11,7 +11,7 @@
 		<tr>
 		<td valign="top">
 		<?php 
-			$sql = "SELECT meta_value, count( * ) as items FROM `wp_usermeta` where meta_key = 'wsl_user' group by meta_value order by items desc ";
+			$sql = "SELECT meta_value, count( * ) as items FROM `{$wpdb->prefix}usermeta` where meta_key = 'wsl_user' group by meta_value order by items desc ";
 
 			$rs = $wpdb->get_results( $sql );  
 			
@@ -40,7 +40,7 @@
 		<td valign="top">
 
 		<?php 
-			$sql = "SELECT meta_value, count( * ) as items FROM `wp_usermeta` where meta_key = 'wsl_user_gender' group by meta_value order by items desc "; 
+			$sql = "SELECT meta_value, count( * ) as items FROM `{$wpdb->prefix}usermeta` where meta_key = 'wsl_user_gender' group by meta_value order by items desc "; 
 
 			$rs = $wpdb->get_results( $sql ); 
 		?>
@@ -67,7 +67,7 @@
 		<td valign="top">
 
 		<?php 
-			$sql = "SELECT meta_value, count( * ) as items FROM `wp_usermeta` where meta_key = 'wsl_user_age' group by meta_value order by items desc limit 21"; 
+			$sql = "SELECT meta_value, count( * ) as items FROM `{$wpdb->prefix}usermeta` where meta_key = 'wsl_user_age' group by meta_value order by items desc limit 21"; 
 
 			$rs = $wpdb->get_results( $sql ); 
 		?>
