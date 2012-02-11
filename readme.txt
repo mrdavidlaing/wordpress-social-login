@@ -11,7 +11,8 @@ Allow your visitors to login and comment with social networks and identities pro
 
 Using <strong>WordPress Social Login</strong>, your blog's users will be able to login and comment using their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, Gowalla, Last.fm, Goodreads, Tumblr and more.
 
-<strong>WordPress Social Login is:</strong><ul>
+<strong>WordPress Social Login is:</strong>
+<ul>
  <li>Open Source,</li> 
  <li>Free, Unlimited,</li> 
  <li>White label, Customizable,</li> 
@@ -19,7 +20,8 @@ Using <strong>WordPress Social Login</strong>, your blog's users will be able to
  <li>With data kept in house</li> 
 </ul>  
 
-<strong>Getting started is as simple as :</strong><ol>
+<strong>Getting started is as simple as :</strong>
+<ol>
  <li>Install WordPress Social Login plugin,</li> 
  <li>Setup the social networks you want to use,</li>  
  <li>Customize the way you want it to look and behave.</li>  
