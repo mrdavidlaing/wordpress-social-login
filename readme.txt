@@ -34,6 +34,7 @@ Using <strong>WordPress Social Login</strong>, your blog's users will be able to
 
 * [thenbrent](http://profiles.wordpress.org/users/thenbrent/) the talented developer behind the Social Connect plugin
 * [Macky Franklin](http://www.mackyfranklin.com) for all the great help
+* [Pat Anvil](http://patanvil.com) for adding Goodreads
 
 == Installation ==
 
