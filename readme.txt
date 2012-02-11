@@ -5,18 +5,34 @@ Requires at least: 3.0
 Tested up to: 3.2.1
 Stable tag: 1.1.8
 
-Allow your visitors to login and comment with social networks and identities providers such as Facebook, Twitter and Google. [BETA PLUGIN!] 
+Allow your visitors to login and comment with social networks and identities providers such as Facebook, Google, Yahoo, Twitter and more. 
 
 == Description ==
 
-This plugin incorporate social networks login/registration integration into your web site. Users will be able to login and comment using their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, Gowalla, Last.fm, Tumblr and AOL.
+Using <strong>WordPress Social Login</strong>, your blog's users will be able to login and comment using their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, Gowalla, Last.fm, Goodreads, Tumblr and more.
 
-Credits:
+<strong>WordPress Social Login is:</strong>
+<ul>
+ <li>Open Source,</li> 
+ <li>Free, Unlimited,</li> 
+ <li>White label, Customizable,</li> 
+ <li>Social sign on solution,</li> 
+ <li>With data kept in house</li> 
+</ul>  
+
+<strong>Getting started is as simple as :</strong>
+<ol>
+ <li>Install WordPress Social Login plugin,</li> 
+ <li>Setup the social networks you want to use,</li>  
+ <li>Customize the way you want it to look and behave.</li>  
+</ol> 
+	
+<strong>Credits:</strong>
 
 - Social Connect authors : http://wordpress.org/extend/plugins/social-connect/
 - HybridAuth Library: http://hybridauth.sourceforge.net/ 
 
-Special thanks to:
+<strong>Special thanks to:</strong>
 
 * [thenbrent](http://profiles.wordpress.org/users/thenbrent/) the talented developer behind the Social Connect plugin
 * [Macky Franklin](http://www.mackyfranklin.com) for all the great help
