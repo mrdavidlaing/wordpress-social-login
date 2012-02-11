@@ -304,6 +304,28 @@ class Hybrid_Auth
 	// --------------------------------------------------------------------
 
 	/**
+	* Return array listing all enabled providers as well as a flag if you are connected.
+	*/ 
+	public static function getProviders()
+	{
+		$idps = array();
+
+		foreach( Hybrid_Auth::$config["providers"] as $idpid => $params ){
+			if($params['enabled']) {
+				$idps[$idpid] = array( 'connected' => false );
+
+				if( Hybrid_Auth::isConnectedWith( $idpid ) ){
+					$idps[$idpid]['connected'] = true;
+				}
+			}
+		}
+
+		return $idps;
+	}
+
+	// --------------------------------------------------------------------
+
+	/**
 	* A generic function to logout all connected provider at once 
 	*/ 
 	public static function logoutAllProviders()
