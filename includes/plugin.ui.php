@@ -121,6 +121,10 @@ add_action( 'wp_head', 'wsl_add_stylesheets' );
 /**
  * Display custom avatars
  * borrowed from http://wordpress.org/extend/plugins/oa-social-login/
+ *
+ * Improved by <jlnd>
+ * http://wordpress.org/support/profile/jlnd
+ *
  * thanks a million
  */
 function wsl_user_custom_avatar($avatar, $id_or_email, $size, $default, $alt) {
