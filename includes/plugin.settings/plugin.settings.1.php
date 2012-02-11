@@ -47,8 +47,8 @@
     <h3 style="margin: 0 0 5px;">Need Help?</h3>
 
 	<p style="line-height: 19px;" align="justify">
-		If you are still new to things, we recommend that you read the <a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a> 
-		and to make sure your server settings meet this <a href="options-general.php?page=wordpress-social-login&amp;wslp=3">Plugin Requirements</a>.
+		If you are still new to things, we recommend that you read the <b><a href="options-general.php?page=wordpress-social-login&wslp=2">Plugin User Guide</a></b>
+		and to make sure your server settings meet this <b><a href="options-general.php?page=wordpress-social-login&amp;wslp=3">Plugin Requirements</a></b>.
 	</p>
 </div> 
 
@@ -56,7 +56,7 @@
     <h3 style="margin: 0 0 5px;">Need Support?</h3>
 
 	<p style="line-height: 19px;">
-		If you run into any issue, feel free to contact me at <b>hybridauth@gmail.com</b>
+		If you run into any issue, feel free to contact me at <b><a href="mailto:hybridauth@gmail.com">hybridauth@gmail.com</a></b>
 	</p>
 </div>
  
@@ -64,7 +64,7 @@
     <h3 style="margin: 0 0 5px;">Donate</h3>
 
 	<p style="line-height: 19px;">
-		If you like this plugin and find it useful, help keep this plugin free and actively developed 
+		If you like this plugin and find it useful, help keep this plugin actively developed 
 
 		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 		<input type="hidden" name="cmd" value="_donations">

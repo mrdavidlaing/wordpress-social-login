@@ -13,8 +13,12 @@ function wsl_process_login()
 			$redirect_to = preg_replace( '|^http://|', 'https://', $redirect_to );
 		}
 	}
-	else {
-		$redirect_to = admin_url();
+	else{
+		$redirect_to = get_option( 'wsl_settings_redirect_url' );
+
+		if( empty( $redirect_to ) ){
+			$redirect_to = site_url();
+		}
 	}
 
 	try{
