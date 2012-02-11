@@ -123,30 +123,40 @@ add_action( 'wp_head', 'wsl_add_stylesheets' );
  * borrowed from http://wordpress.org/extend/plugins/oa-social-login/
  * thanks a million
  */
-function wsl_user_custom_avatar ()
-{
+function wsl_user_custom_avatar($avatar, $id_or_email, $size, $default, $alt) {
 	global $comment;
-	$args = func_get_args ();
 
-	//Check if we are in a comment
-	if (!is_null ($comment) AND !empty ($comment->user_id) AND !empty ($args [0]))
-	{
-		if( get_option ('wsl_settings_users_avatars') )
-		{
-			//Read Thumbnail
-			if (($user_thumbnail = get_user_meta ($comment->user_id, 'wsl_user_image', true)) !== false)
-			{
-				if (strlen (trim ($user_thumbnail)) > 0)
-				{
-					$user_thumbnail = preg_replace ('#src=([\'"])([^\\1]+)\\1#Ui', "src=\\1" . $user_thumbnail . "\\1", $args [0]); 
+	if( get_option ('wsl_settings_users_avatars') && !empty ($avatar)) {
+		//Check if we are in a comment
+		if (!is_null ($comment) && !empty ($comment->user_id)) {
+			$user_id = $comment->user_id;
+		}
+		elseif(!empty ($id_or_email)) {
+			if ( is_numeric($id_or_email) ) {
+				$user_id = (int) $id_or_email;
+			}
+			elseif ( is_string( $id_or_email ) && ( $user = get_user_by( 'email', $id_or_email ) ) ) {
+				$user_id = $user->ID;
+			}
+			elseif ( is_object( $id_or_email ) && ! empty( $id_or_email->user_id ) ) {
+				$user_id = (int) $id_or_email->user_id;
+			}
+		}
+		// Get the thumbnail provided by WordPress Social Login
+		if ($user_id) {
+			if (($user_thumbnail = get_user_meta ($user_id, 'wsl_user_image', true)) !== false) {
+				if (strlen (trim ($user_thumbnail)) > 0) {
+					$user_thumbnail = preg_replace ('#src=([\'"])([^\\1]+)\\1#Ui', "src=\\1" . $user_thumbnail . "\\1", $avatar);
+
 					return $user_thumbnail;
 				}
 			}
 		}
 	}
 
-	return $args [0];
+	// No avatar found.  Return unfiltered.
+	return $avatar;
 }
 
-add_filter ( 'get_avatar', 'wsl_user_custom_avatar' );
+add_filter ( 'get_avatar', 'wsl_user_custom_avatar', 10, 5);
 
