@@ -52,7 +52,7 @@
 	</p>
 </div> 
 
-<div style="clear:both" class="wsl_notice wsl_aside">
+<div style="clear:both" class="wsl_donate wsl_aside">
     <h3 style="margin: 0 0 5px;">Need Support?</h3>
 
 	<p style="line-height: 19px;">

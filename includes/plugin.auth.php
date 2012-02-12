@@ -12,13 +12,18 @@ function wsl_process_login()
 		if ( isset( $secure_cookie ) && $secure_cookie && false !== strpos( $redirect_to, 'wp-admin') ){
 			$redirect_to = preg_replace( '|^http://|', 'https://', $redirect_to );
 		}
-	}
-	else{
-		$redirect_to = get_option( 'wsl_settings_redirect_url' );
 
-		if( empty( $redirect_to ) ){
-			$redirect_to = site_url();
+		if ( strpos( $redirect_to, 'wp-admin') ){
+			$redirect_to = get_option( 'wsl_settings_redirect_url' ); 
 		}
+	}
+
+	if( empty( $redirect_to ) ){
+		$redirect_to = get_option( 'wsl_settings_redirect_url' ); 
+	}
+
+	if( empty( $redirect_to ) ){
+		$redirect_to = site_url();
 	}
 
 	try{
