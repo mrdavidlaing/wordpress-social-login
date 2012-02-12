@@ -3,7 +3,7 @@ Contributors: miled
 Tags:  twitter, facebook, google, yahoo, linkedin, myspace, foursquare, aol, gowalla, last.fm, tumblr, login, register, comment, social, social networks, social login
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 1.1.8
+Stable tag: 1.1.9
 
 Allow your visitors to login and comment with social networks and identities providers such as Facebook, Google, Yahoo, Twitter and more. 
 
@@ -65,6 +65,14 @@ As an open source project and beta stage plugin, We Appreciate Your Feedback!
 3. **Setup** - To correctly setup these Identity Providers please carefully follow the help section of each one.
 
 == Changelog ==
+
+= 1.1.9 =
+
+* some fixes and small iprovements
+
+= 1.1.8 =
+
+* add goodreads
 
 = 1.1.7 =
 
