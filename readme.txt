@@ -56,7 +56,7 @@ If you want to add the social login widget to another location in your theme, yo
 
 = Where can I report bugs & get support? =
 
-As an open source project and beta stage plugin, We Appreciate Your Feedback! 
+As an open source project and beta stage plugin, We Appreciate Your Feedback! Also to get **help and support**, join us on the [discussion group](https://groups.google.com/forum/#!forum/hybridauth-plugins)
 
 == Screenshots ==
 
