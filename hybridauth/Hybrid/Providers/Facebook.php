@@ -38,8 +38,10 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 			$this->display = $this->config["display"];
 		}
 
-		require_once Hybrid_Auth::$config["path_libraries"] . "Facebook/base_facebook.php";
-		require_once Hybrid_Auth::$config["path_libraries"] . "Facebook/facebook.php";
+		if ( ! class_exists('FacebookApiException') ) {
+			require_once Hybrid_Auth::$config["path_libraries"] . "Facebook/base_facebook.php";
+			require_once Hybrid_Auth::$config["path_libraries"] . "Facebook/facebook.php";
+		}
 
 		$this->api = new Facebook( ARRAY( 'appId' => $this->config["keys"]["id"], 'secret' => $this->config["keys"]["secret"] ) ); 
 
