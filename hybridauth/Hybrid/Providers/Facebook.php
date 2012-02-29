@@ -128,8 +128,8 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 		$this->user->profile->emailVerified = (array_key_exists('email',$data))?$data['email']:"";
 		$this->user->profile->region        = (array_key_exists("hometown",$data)&&array_key_exists("name",$data['hometown']))?$data['hometown']["name"]:"";
 
-		if( isset( $data['birthday'] ) ) {
-			list($birthday_month, $birthday_day, $birthday_year) = (array_key_exists('birthday',$data))?$data['birthday']:"";
+		if( array_key_exists('birthday',$data) ) {
+			list($birthday_month, $birthday_day, $birthday_year) = split( "/", $data['birthday'] );
 
 			$this->user->profile->birthDay   = $birthday_day;
 			$this->user->profile->birthMonth = $birthday_month;
