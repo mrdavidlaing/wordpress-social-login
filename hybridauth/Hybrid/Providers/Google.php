@@ -13,7 +13,7 @@
 class Hybrid_Providers_Google extends Hybrid_Provider_Model_OAuth2
 {
 	// default permissions 
-	public $scope = "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email";
+	public $scope = "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.google.com/m8/feeds/";
 
 	/**
 	* IDp wrappers initializer 
@@ -61,6 +61,14 @@ class Hybrid_Providers_Google extends Hybrid_Provider_Model_OAuth2
 		$this->user->profile->email         = (property_exists($response,'email'))?$response->email:"";
 		$this->user->profile->emailVerified = (property_exists($response,'email'))?$response->email:"";
 		$this->user->profile->language      = (property_exists($response,'locale'))?$response->locale:"";
+
+		if( property_exists($response,'birthday') ){ 
+			list($birthday_year, $birthday_month, $birthday_day) = explode( '-', $response->birthday );
+
+			$this->user->profile->birthDay   = (int) $birthday_day;
+			$this->user->profile->birthMonth = (int) $birthday_month;
+			$this->user->profile->birthYear  = (int) $birthday_year;
+		}
 
 		return $this->user->profile;
 	}

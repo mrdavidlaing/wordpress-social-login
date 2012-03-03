@@ -129,11 +129,11 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 		$this->user->profile->region        = (array_key_exists("hometown",$data)&&array_key_exists("name",$data['hometown']))?$data['hometown']["name"]:"";
 
 		if( array_key_exists('birthday',$data) ) {
-			list($birthday_month, $birthday_day, $birthday_year) = split( "/", $data['birthday'] );
+			list($birthday_month, $birthday_day, $birthday_year) = explode( "/", $data['birthday'] );
 
-			$this->user->profile->birthDay   = $birthday_day;
-			$this->user->profile->birthMonth = $birthday_month;
-			$this->user->profile->birthYear  = $birthday_year;
+			$this->user->profile->birthDay   = (int) $birthday_day;
+			$this->user->profile->birthMonth = (int) $birthday_month;
+			$this->user->profile->birthYear  = (int) $birthday_year;
 		}
 
 		return $this->user->profile;
@@ -222,11 +222,11 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 			if( $stream == "me" && $item["from"]["id"] != $this->api->getUser() ){
 				continue;
 			}
-		
+
 			$ua = new Hybrid_User_Activity();
 
 			$ua->id                 = (array_key_exists("id",$item))?$item["id"]:"";
-			$ua->date               = (array_key_exists("created_time",$item))?$item["created_time"]:"";
+			$ua->date               = (array_key_exists("created_time",$item))?strtotime($item["created_time"]):"";
 
 			if( $item["type"] == "video" ){
 				$ua->text           = (array_key_exists("link",$item))?$item["link"]:"";
@@ -248,7 +248,7 @@ class Hybrid_Providers_Facebook extends Hybrid_Provider_Model
 				$ua->user->identifier   = (array_key_exists("id",$item["from"]))?$item["from"]["id"]:"";
 				$ua->user->displayName  = (array_key_exists("name",$item["from"]))?$item["from"]["name"]:"";
 				$ua->user->profileURL   = (property_exists($ua->user,'identifier'))?$ua->user->identifier:"";
-				$ua->user->photoURL     = (property_exists($ua->user,'identifier . "/picture?type=square"'))?$ua->user->identifier . "/picture?type=square":"";
+				$ua->user->photoURL     = "https://graph.facebook.com/" . $ua->user->identifier . "/picture?type=square";
 
 				$activities[] = $ua;
 			}
