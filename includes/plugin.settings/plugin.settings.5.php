@@ -54,7 +54,7 @@
     <h3 style="margin: 0 0 5px;">Need Support?</h3>
 
 	<p style="line-height: 19px;">
-		If you run into any issue, please join us on the <b><a href="https://groups.google.com/forum/#!forum/hybridauth-plugins">discussion group</a></b> or feel free to contact me at <b><a href="mailto:hybridauth@gmail.com">hybridauth@gmail.com</a></b>
+		If you run into any issue, please join us on the <b><a href="options-general.php?page=wordpress-social-login&wslp=8">discussion group</a></b> or feel free to contact me at <b><a href="mailto:hybridauth@gmail.com">hybridauth@gmail.com</a></b>
 	</p>
 </div>
 

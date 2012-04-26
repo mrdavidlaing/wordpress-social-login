@@ -56,7 +56,7 @@
     <h3 style="margin: 0 0 5px;">Need Support?</h3>
 
 	<p style="line-height: 19px;">
-		If you run into any issue, please join us on the <b><a href="https://groups.google.com/forum/#!forum/hybridauth-plugins">discussion group</a></b> or feel free to contact me at <b><a href="mailto:hybridauth@gmail.com">hybridauth@gmail.com</a></b>
+		If you run into any issue, please join us on the <b><a href="options-general.php?page=wordpress-social-login&wslp=8">discussion group</a></b> or feel free to contact me at <b><a href="mailto:hybridauth@gmail.com">hybridauth@gmail.com</a></b>
 	</p>
 </div>
  
@@ -76,6 +76,8 @@ Except for OpenID providers, each social network and identities provider will re
 <br />
 
 <?php 
+	$nbprovider = 0;
+	
 	foreach( $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG AS $item ):
 		$provider_id                = @ $item["provider_id"];
 		$provider_name              = @ $item["provider_name"];
@@ -92,11 +94,11 @@ Except for OpenID providers, each social network and identities provider will re
 			$provider_callback_url  = '<span style="color:green">' . WORDPRESS_SOCIAL_LOGIN_HYBRIDAUTH_ENDPOINT_URL	 . '?hauth.done=' . $provider_id . '</span>';
 		}
 
-		$setupsteps = 0;
+		$setupsteps = 0; 
 
 		$assets_base_url = WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . '/assets/img/16x16/';
 ?> 
-	<h3 style="margin-left:30px;"><img alt="<?php echo $provider_name ?>" title="<?php echo $provider_name ?>" src="<?php echo $assets_base_url . strtolower( $provider_id ) . '.png' ?>" style="vertical-align: top;" /> <?php echo $provider_name ?></h3> 
+	<h3 style="margin-left:30px;"><img alt="<?php echo $provider_name ?>" title="<?php echo $provider_name ?>" src="<?php echo $assets_base_url . strtolower( $provider_id ) . '.png' ?>" style="vertical-align: top;width:16px;height:16px;" /> <?php echo ++$nbprovider ?>. <?php echo $provider_name ?></h3> 
 	<div> 
 		<div class="cfg">
 		   <div class="cgfparams">
@@ -164,8 +166,7 @@ Except for OpenID providers, each social network and identities provider will re
 					<?php endif; ?>	
 
 					<?php if ( $provider_id == "Twitter" ) : ?>
-						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Put your website domain in the <b>Application Website</b> and <b>Application Callback URL</b> fields. This should match with the current hostname <em style="color:#CB4B16;"><?php echo $_SERVER["SERVER_NAME"] ?></em>.</p> 
-						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Set the <b>Application Type</b> to <em style="color:#CB4B16;">Browser</em>.</p> 
+						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Put your website domain in the <b>Application Website</b> and <b>Application Callback URL</b> fields. This should match with the current hostname <em style="color:#CB4B16;"><?php echo $_SERVER["SERVER_NAME"] ?></em>.</p>  
 						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Set the <b>Default Access Type</b> to <em style="color:#CB4B16;">Read</em>.</p> 
 					<?php endif; ?>	
 					
