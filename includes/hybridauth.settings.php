@@ -137,6 +137,11 @@ $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG = ARRAY(
 		// "new_app_link"      => NULL, 
 	// ),
 	ARRAY( 
+		"provider_id"       => "Skyrock",
+		"provider_name"     => "Skyrock", 
+		"new_app_link"      => "https://www.skyrock.com/developer/application", 
+	),
+	ARRAY( 
 		"provider_id"       => "Mixi",
 		"provider_name"     => "Mixi", 
 		"new_app_link"      => NULL, 

@@ -67,10 +67,15 @@
 <p style="margin:10px;line-height: 22px;" align="justify">
 Except for OpenID providers, each social network and identities provider will require that you create an external application linking your Web site to theirs apis. These external applications ensures that users are logging into the proper Web site and allows identities providers to send the user back to the correct Web site after successfully authenticating their Accounts.
 </p>
-	
+
+<p style="margin:10px;line-height: 22px;" align="justify">
+<b>Important:</b>
+</p>
 <ul style="list-style:circle inside;margin-left:30px;">
 	<li style="color: #000000;font-size: 14px;">To correctly setup these Identity Providers please carefully follow the help section of each one.</li>
-	<li style="color: #000000;font-size: 14px;">If a <b>Provider Satus</b> is set to <b style="color:red">NO</b> then users will not be able to login with that provider on you website.</li>
+	<li style="color: #000000;font-size: 14px;">If the <b>Allow users to sign on with provider?</b> is set to <b style="color:red">NO</b> then users will not be able to login with that provider on you website.</li>
+	<li style="color: #000000;font-size: 14px;">Some social networks like Twitter and LinkedIn does NOT give out their user's email. A random email will then be generated for them.</li>
+	<li style="color: #000000;font-size: 14px;">WSL will try to link existing blog accounts to social network users profiles by matching their verified emails. Currently this only works for Facebook, Google, Yahaoo and Foursquare.</li>
 </ul>
 
 <br />
@@ -184,10 +189,10 @@ Except for OpenID providers, each social network and identities provider will re
 ?>
 	<br /> 
 	<div style="margin-left:30px;">
-		Thanks for scrolling this far down! now click the big button to complete the installation.
+		<b>Thanks for scrolling this far down!</b> Now click the save button to complete the setup.
 		<br />
 		<br />
-		<input type="submit" class="inputsave" value="Save" /> 
+		<input type="submit" class="button-primary" value="Save Changes" /> 
 	</div> 
 </div>
 

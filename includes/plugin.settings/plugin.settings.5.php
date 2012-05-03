@@ -118,11 +118,11 @@
 		<input type="text" name="wsl_settings_redirect_url" value="<?php echo $wsl_settings_redirect_url; ?>" class="inputgnrc" style="width: 400px;">
 		<br />
 		<small>
-			Where should users be redirected to after registring? (<b>By default its set to your blog's homepage</b>)
+			Where should users be redirected to after registring? (<b>By default its the blog homepage</b>)
 		</small>
     </td>
   </tr>
-
+ 
   <tr>
     <td>&nbsp;</td>
     <td><input type="submit" class="button-primary" value="Save" /> </td>

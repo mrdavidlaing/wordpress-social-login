@@ -361,8 +361,11 @@ jQuery(function () {
 				<div id="chart_2" style="min-width: 470px; height: 400px; margin: 0 auto"></div>
 				<hr />
 				<div id="chart_3" style="min-width: 470px; height: 400px; margin: 0 auto"></div>
+				<!--
+				eh ya men3ech
 				<hr />
-				<div id="chart_4" style="min-width: 470px; height: 400px; margin: 0 auto; display:none;"></div>
+				<div id="chart_4" style="min-width: 470px; height: 400px; margin: 0 auto;"></div>
+				-->
 			</td>
 		</tr> 
 	</table>
