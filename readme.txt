@@ -5,7 +5,7 @@ Requires at least: 3.0
 Tested up to: 3.2.1
 Stable tag: 1.1.9
 
-Allow your visitors to login and comment with social networks and identities providers such as Facebook, Google, Yahoo, Twitter and more. 
+Allow your visitors to login and comment with social networks and identities providers such as Facebook, Google, Yahoo, Twitter and more.
 
 == Description ==
 
