@@ -100,9 +100,9 @@ function wsl_process_login()
 	// Create new user and associate provider identity
 	else{
 		// generate a valid user login
-		$user_login = str_replace( ' ', '_', strtolower( $hybridauth_user_profile->displayName ) );
+		$user_login = trim( str_replace( ' ', '_', strtolower( $hybridauth_user_profile->displayName ) ) );
 
-		if( ! validate_username( $user_login ) ){
+		if( empty( $user_login ) || ! validate_username( $user_login ) ){
 			$user_login = strtolower( $provider ) . "_user_" . md5( $hybridauth_user_profile->identifier );
 		}
 
@@ -151,7 +151,10 @@ function wsl_process_login()
 
 		// update user metadata
 		if( $user_id && is_integer( $user_id ) ){
-			update_user_meta( $user_id, $provider, $hybridauth_user_profile->identifier ); 
+			update_user_meta( $user_id, $provider, $hybridauth_user_profile->identifier );
+		}
+		else if (is_wp_error($user_id)) { //- http://wordpress.org/support/topic/plugin-wordpress-social-login-error-with-vkontake-provider?replies=1#post-2796109
+			echo $user_id->get_error_message();
 		}
 		else{
 			die( "An error occurred while creating a new user!" );
