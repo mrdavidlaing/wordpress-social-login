@@ -2,7 +2,7 @@
 /*
 Plugin Name: WordPress Social Login
 Plugin URI: http://wordpress.org/extend/plugins/wordpress-social-login/
-Description: Allow your visitors to login and comment with social networks and identities providers such as Facebook, Twitter and Google. [BETA Stage!!] 
+Description: Allow your visitors to login and comment with social networks and identities providers such as Facebook, Twitter and Google.
 Version: 1.1.9
 Author: Miled
 Author URI: http://wordpress.org/extend/plugins/wordpress-social-login/

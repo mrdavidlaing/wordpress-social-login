@@ -146,4 +146,9 @@ $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG = ARRAY(
 		// "provider_name"     => "Hyves", 
 		// "new_app_link"      => NULL, 
 	// ),
+	ARRAY( 
+		"provider_id"       => "Steam",
+		"provider_name"     => "Steam", 
+		"new_app_link"      => NULL, 
+	),
 );

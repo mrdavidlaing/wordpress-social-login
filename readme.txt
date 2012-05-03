@@ -1,6 +1,6 @@
 === WordPress Social Login ===
 Contributors: miled
-Tags:  twitter, facebook, google, yahoo, linkedin, myspace, foursquare, aol, gowalla, last.fm, tumblr, login, register, comment, social, social networks, social login
+Tags:  facebook, google, yahoo, twitter, windows live, myspace, foursquare, linkedin, gowalla, last.fm, goodreads, tumblr, aol, vkontakte, stackoverflow, github, 500px, mixi.jp, steam, login, register, comment, social, social networks, social login
 Requires at least: 3.0
 Tested up to: 3.2.1
 Stable tag: 1.1.9
@@ -9,7 +9,7 @@ Allow your visitors to login and comment with social networks and identities pro
 
 == Description ==
 
-Using <strong>WordPress Social Login</strong>, your blog's users will be able to login and comment using their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, Gowalla, Last.fm, Goodreads, Tumblr and AOL.
+Using <strong>WordPress Social Login</strong>, your blog's users will be able to login and comment using their accounts on Facebook, Google, Yahoo, Twitter, Windows Live, Myspace, Foursquare, Linkedin, Gowalla, Last.fm, Goodreads, Tumblr, AOL, Vkontakte, Stackoverflow, Github, 500px, Mixi.jp, Steam.
 
 <strong>WordPress Social Login is:</strong>
 <ul>
@@ -53,10 +53,6 @@ WordPress Social Login will attempts to work with the default WordPress comment,
 If you want to add the social login widget to another location in your theme, you can insert the following code in that location:
 
 `<?php do_action( 'wordpress_social_login' ); ?>`
-
-= Where can I report bugs & get support? =
-
-As an open source project and beta stage plugin, We Appreciate Your Feedback! Also to get **help and support**, join us on the [discussion group](https://groups.google.com/forum/#!forum/hybridauth-plugins)
 
 == Screenshots ==
 
