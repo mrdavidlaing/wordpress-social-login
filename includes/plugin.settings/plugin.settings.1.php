@@ -7,7 +7,7 @@
     position: relative;
     width: 250px;
     z-index: 200;
-} 
+}  
 .wsl_help {
     line-height: 1;
     padding: 8px;
@@ -42,8 +42,8 @@
 	padding: 10px;      
 }
 </style>
-
-<div class="wsl_help wsl_aside">
+ 
+<div style="clear:both" class="wsl_help wsl_aside">
     <h3 style="margin: 0 0 5px;">Need Help?</h3>
 
 	<p style="line-height: 19px;" align="justify">
@@ -51,7 +51,7 @@
 		and to make sure your server settings meet this <b><a href="options-general.php?page=wordpress-social-login&amp;wslp=3">Plugin Requirements</a></b>.
 	</p>
 </div> 
-
+ 
 <div style="clear:both" class="wsl_notice wsl_aside">
     <h3 style="margin: 0 0 5px;">Need Support?</h3>
 
@@ -114,6 +114,11 @@
 	<strong>WordPress Social Login</strong> allow your visitors to comment and login with social networks such as Twitter, Facebook, Google, Yahoo and more.
 </p>
  
+<table width="70%" border="0">
+<tr>
+	<td>
+
+
 <div style="margin-top:20px;">
 	<p style="margin:10px;font-size: 14px;">  
 		WordPress Social Login is:
@@ -143,3 +148,12 @@
 		and that is it!
 	</p> 
 </div>
+	</td>
+	<td >
+	
+<a class="wepay-widget" href="https://www.wepay.com/donations/9880?widget_type=donations&widget_donation_id=9880&widget_auth_token=d76f08da5bbf85965d2316811a353582378400dd&widget_show_description=0&widget_show_thermometer=0&widget_show_donations=1">Donate to Hybridauth<script id="wepay-widget_script" type="text/javascript" src="https://www.wepay.com/min/js/widget.wepay.js"></script></a>
+
+
+	</td>
+</tr>
+</table>
