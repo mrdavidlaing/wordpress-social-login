@@ -141,21 +141,22 @@ Except for OpenID providers, each social network and identities provider will re
 					<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Go to <a href="<?php echo $provider_new_app_link ?>" target ="_blanck"><?php echo $provider_new_app_link ?></a> and <b>create a new application</b>.</p>
 
 					<?php if ( $provider_id == "Google" ) : ?>
-						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> On the <b>Dashboard sidebar</b> click on <b>API Access</b> then Click "Create an OAuth 2.0 client ID...".</p> 
-					<?php endif; ?>	
-
-					<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Fill out any required fields such as the application name and description.</p> 
+						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> On the <b>Dashboard sidebar</b> click on <b>API Access</b> then Click <em style="color:#CB4B16;">"Create an OAuth 2.0 client ID..."</em>.</p> 
+					<?php endif; ?>	 
 
 					<?php if ( $provider_id == "Google" ) : ?>  
-</p>
-<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> On the <b>"Create Client ID"</b> popup :
-<br />&nbsp;&nbsp; - Enter a product name (the name of your website will do).
-<br />&nbsp;&nbsp; - Enter the URL for a logo if you like.
-<br />&nbsp;&nbsp; - Click Next.
-<br />&nbsp;&nbsp; - Select <em style="color:#CB4B16;">"Web application"</em> as the application type.
-<br />&nbsp;&nbsp; - Then switch to advanced settings by clicking on <b>(more options)</b>
-.</p>
+							</p>
+							<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> On the <b>"Create Client ID"</b> popup :
+							<br />&nbsp;&nbsp; - Enter a product name (the name of your website will do).
+							<br />&nbsp;&nbsp; - Enter the URL for a logo if you like.
+							<br />&nbsp;&nbsp; - Click Next.
+							<br />&nbsp;&nbsp; - Select <em style="color:#CB4B16;">"Web application"</em> as the application type.
+							<br />&nbsp;&nbsp; - Then switch to advanced settings by clicking on <b>(more options)</b>
+							.</p>
+					<?php else: ?>	
+						<p><?php echo "<b>" . ++$setupsteps . "</b>." ?> Fill out any required fields such as the application name and description.</p> 
 					<?php endif; ?>	
+
 					<?php if ( $provider_callback_url ) : ?>
 						<p>
 							<?php echo "<b>" . ++$setupsteps . "</b>." ?> Provide this URL as the <b>Callback URL</b> for your application:
