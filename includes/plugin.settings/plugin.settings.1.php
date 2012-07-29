@@ -139,7 +139,9 @@
 	<ol style="margin-left:65px;font-size: 14px;">
 		<li><strong>Setup</strong> the social networks you want to use,</li> 
 		<li><strong>Customize</strong> the way you want it to look and behave.</li>  
+		<!--
 		<li>Get an <strong>insight</strong> into users informations and track trends in site registrations</li>  
+		-->
 	</ol>
 
 	<p style="margin:10px;margin-top:20px;font-size: 14px;">  
