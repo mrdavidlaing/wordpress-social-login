@@ -114,7 +114,7 @@
 	<strong>WordPress Social Login</strong> allow your visitors to comment and login with social networks such as Twitter, Facebook, Google, Yahoo and more.
 </p>
  
-<table width="70%" border="0">
+<table width="60%" border="0">
 <tr>
 	<td>
 
@@ -138,10 +138,8 @@
 
 	<ol style="margin-left:65px;font-size: 14px;">
 		<li><strong>Setup</strong> the social networks you want to use,</li> 
-		<li><strong>Customize</strong> the way you want it to look and behave.</li> 
-<!--		
-		<li>Get an <strong>insight</strong> into users informations and track trends in site registrations</li> 
--->
+		<li><strong>Customize</strong> the way you want it to look and behave.</li>  
+		<li>Get an <strong>insight</strong> into users informations and track trends in site registrations</li>  
 	</ol>
 
 	<p style="margin:10px;margin-top:20px;font-size: 14px;">  
@@ -149,10 +147,30 @@
 	</p> 
 </div>
 	</td>
-	<td >
+	<td align="center">
 	
-<a class="wepay-widget" href="https://www.wepay.com/donations/9880?widget_type=donations&widget_donation_id=9880&widget_auth_token=d76f08da5bbf85965d2316811a353582378400dd&widget_show_description=0&widget_show_thermometer=0&widget_show_donations=1">Donate to Hybridauth<script id="wepay-widget_script" type="text/javascript" src="https://www.wepay.com/min/js/widget.wepay.js"></script></a>
-
+		<a class="wepay-widget-button wepay-green" id="wepay_widget_anchor_5015abae06e3b" href="https://www.wepay.com/donations/9880">Donate</a>
+		<script type="text/javascript">
+			var WePay = WePay || {};
+			WePay.load_widgets = WePay.load_widgets || function() { };
+			WePay.widgets = WePay.widgets || [];
+			WePay.widgets.push( {
+				object_id: 9880,
+				widget_type: "donation_campaign",
+				anchor_id: "wepay_widget_anchor_5015abae06e3b",
+				widget_options: {
+					allow_anonymous: true,
+					button_text: "Donate"
+				}
+			});
+			if (!WePay.script) {
+				WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;
+				WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);
+			} else if (WePay.load_widgets) {
+				WePay.load_widgets();
+			}
+		</script> 
 
 	</td>
 </tr>
