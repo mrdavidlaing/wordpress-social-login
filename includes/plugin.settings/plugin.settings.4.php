@@ -105,6 +105,14 @@ Except for OpenID providers, each social network and identities provider will re
 		$assets_base_url = WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL . '/assets/img/16x16/';
 ?> 
 	<h3 style="margin-left:30px;"><img alt="<?php echo $provider_name ?>" title="<?php echo $provider_name ?>" src="<?php echo $assets_base_url . strtolower( $provider_id ) . '.png' ?>" style="vertical-align: top;width:16px;height:16px;" /> <?php echo ++$nbprovider ?>. <?php echo $provider_name ?></h3> 
+	
+	<?php if ( in_array( $provider_id, array( "Twitter", "LinkedIn", "Identica", "Steam" ) ) ) : ?>
+		<small>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<b  style="color:#CB4B16;">Note:</b> The <b><?php echo $provider_name ?></b> API does not return a user's email address. A random email will then be generated instead.
+		</small>
+	<?php endif; ?>
+
 	<div> 
 		<div class="cfg">
 		   <div class="cgfparams">
