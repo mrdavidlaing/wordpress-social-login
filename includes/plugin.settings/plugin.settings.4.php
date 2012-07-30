@@ -109,7 +109,7 @@ Except for OpenID providers, each social network and identities provider will re
 	<?php if ( in_array( $provider_id, array( "Twitter", "LinkedIn", "Identica", "Steam" ) ) ) : ?>
 		<small>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<b  style="color:#CB4B16;">Note:</b> The <b><?php echo $provider_name ?></b> API does not return a user's email address. A random email will then be generated instead.
+			<b  style="color:#CB4B16;">Note:</b> The <b><?php echo $provider_name ?></b> API do not return a user's email address. A random email will then be generated instead.
 		</small>
 	<?php endif; ?>
 
