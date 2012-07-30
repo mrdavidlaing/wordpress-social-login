@@ -192,9 +192,15 @@ Except for OpenID providers, each social network and identities provider will re
 					<p>No registration required for OpenID based providers</p> 
 				<?php endif; ?> 
 		   </div>
-		</div>   
+		</div>  
 	</div> 
+
 	<br style="clear:both;"/> 
+
+	<div style="width:860px;padding:4px;"> 
+		<input type="submit" class="button-primary"  style="float:right;" value="Save" /> 
+	</div> 
+	
 	<br />
 <?php
 	endforeach;
