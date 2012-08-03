@@ -55,8 +55,11 @@ function wsl_render_login_form()
 			Please visit the <strong>Settings\ WP Social Login</strong> administration page to configure this plugin.
 			<br />
 			For more information please refer to the plugin <a href="http://hybridauth.sourceforge.net/userguide/Plugin_WordPress_Social_Login.html">online user guide</a> 
-			or contact us at <a href="http://hybridauth.sourceforge.net/">hybridauth.sourceforge.net</a>.
+			or contact us at <a href="http://hybridauth.sourceforge.net/">hybridauth.sourceforge.net</a>
 		</p>
+		<style>
+			#wp-social-login-connect-with{display:none;}
+		</style>
 		<?php
 	}
 
