@@ -58,6 +58,16 @@
 	<p style="line-height: 19px;" align="justify">
 		If you run into any issue, please join us on the <b><a href="options-general.php?page=wordpress-social-login&wslp=8">discussion group</a></b> or feel free to contact me at <b><a href="mailto:hybridauth@gmail.com">hybridauth@gmail.com</a></b>
 	</p>
+</div> 
+ 
+<div style="clear:both" class="wsl_donate wsl_aside">
+    <h3 style="margin: 0 0 5px;">Support us?</h3>
+
+	<p style="line-height: 19px;" align="left"> 
+		Support this plugin development. Donate now using <strong>PayPal</strong>. Thanks you!
+	</p>
+
+	<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=hybridauth@gmail.com&currency_code=&amount=&return=&item_name=Donation+To+Hybridauth" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" /></a>
 </div>
 
 <?php 
@@ -73,7 +83,7 @@
 
 	if( $nok ){
 ?>
-<div style="clear:both" class="wsl_alert wsl_aside">
+<div style="clear:both;" class="wsl_alert wsl_aside">
     <h3 style="margin: 0 0 5px;">Important</h3>
 
 	<p style="line-height: 19px;">
@@ -86,7 +96,7 @@
 	}
 ?>
 
-<div style="clear:both;padding-bottom: 0;" class="wsl_donate wsl_aside">
+<div style="clear:both;padding-bottom: 0;display:none;" class="wsl_donate wsl_aside">
     <h3 style="margin: 0 0 5px;">Contribute</h3>
 
 	<p style="line-height: 19px;" align="justify">
@@ -148,32 +158,6 @@
 		and that is it!
 	</p> 
 </div>
-	</td>
-	<td align="center">
-	
-		<a class="wepay-widget-button wepay-green" id="wepay_widget_anchor_5015abae06e3b" href="https://www.wepay.com/donations/9880">Donate</a>
-		<script type="text/javascript">
-			var WePay = WePay || {};
-			WePay.load_widgets = WePay.load_widgets || function() { };
-			WePay.widgets = WePay.widgets || [];
-			WePay.widgets.push( {
-				object_id: 9880,
-				widget_type: "donation_campaign",
-				anchor_id: "wepay_widget_anchor_5015abae06e3b",
-				widget_options: {
-					allow_anonymous: true,
-					button_text: "Donate"
-				}
-			});
-			if (!WePay.script) {
-				WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;
-				WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);
-			} else if (WePay.load_widgets) {
-				WePay.load_widgets();
-			}
-		</script> 
-
-	</td>
+	</td> 
 </tr>
 </table>
