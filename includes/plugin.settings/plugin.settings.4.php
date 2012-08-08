@@ -67,7 +67,7 @@
 		Support this plugin development. Donate now using <strong>PayPal</strong>. Thanks you!
 	</p>
 
-	<a href="http://bit.ly/OTuFYN" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" /></a>
+	<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=hybridauth@gmail.com&currency_code=&amount=&return=&item_name=Donation+To+Hybridauth" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" /></a>
 </div>
 
 <form method="post" id="wsl_setup_form" action="options.php"> 
@@ -116,7 +116,7 @@ Except for OpenID providers, each social network and identities provider will re
 ?> 
 	<h3 style="margin-left:30px;"><img alt="<?php echo $provider_name ?>" title="<?php echo $provider_name ?>" src="<?php echo $assets_base_url . strtolower( $provider_id ) . '.png' ?>" style="vertical-align: top;width:16px;height:16px;" /> <?php echo ++$nbprovider ?>. <?php echo $provider_name ?></h3> 
 	
-	<?php if ( in_array( $provider_id, array( "Twitter", "LinkedIn", "Identica", "Tumblr", "Goodreads", "500px", "Vkontakte", "Gowalla", "Steam" ) ) ) : ?>
+	<?php if ( in_array( $provider_id, array( "Twitter", "Identica", "Tumblr", "Goodreads", "500px", "Vkontakte", "Gowalla", "Steam" ) ) ) : ?>
 		<small>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 			<b  style="color:#CB4B16;">Note:</b> The <b><?php echo $provider_name ?></b> API do not return a user's email address. A random email will then be generated instead.
