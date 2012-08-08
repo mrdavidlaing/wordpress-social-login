@@ -4,7 +4,7 @@ Tags:  facebook, google, yahoo, twitter, windows live, myspace, foursquare, link
 Requires at least: 3.0
 Tested up to: 3.2.1
 Stable tag: 1.2.0
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=hybridauth@gmail.com&currency_code=&amount=&return=&item_name=Donation+To+Hybridauth
+Donate link: http://bit.ly/OTuFYN
 License: MIT License
 License URI: http://www.opensource.org/licenses/MIT
 
