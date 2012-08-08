@@ -85,7 +85,7 @@ Except for OpenID providers, each social network and identities provider will re
 	<li style="color: #000000;font-size: 14px;">To correctly setup these Identity Providers please carefully follow the help section of each one.</li>
 	<li style="color: #000000;font-size: 14px;">If the <b>Allow users to sign on with provider?</b> is set to <b style="color:red">NO</b> then users will not be able to login with that provider on you website.</li>
 	<li style="color: #000000;font-size: 14px;">To enable russian, cyrillic or arabic usernames, you might need <a target="_blank" href="http://wordpress.org/extend/plugins/wordpress-special-characters-in-usernames/">WordPress Special Characters in Usernames</a> plugin.</li>
-	<li style="color: #000000;font-size: 14px;">Some social networks like Twitter and LinkedIn does NOT give out their user's email. A random email will then be generated for them.</li>
+	<li style="color: #000000;font-size: 14px;">Some social networks like Twitter do NOT give out their user's email. A random email will then be generated for them.</li>
 	<li style="color: #000000;font-size: 14px;">WSL will try to link existing blog accounts to social network users profiles by matching their verified emails. Currently this only works for Facebook, Google, Yahaoo and Foursquare.</li>
 </ul>
 
