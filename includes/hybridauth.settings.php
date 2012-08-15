@@ -75,6 +75,14 @@ $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG = ARRAY(
 	)
 	,
 	ARRAY( 
+		"provider_id"       => "Instagram",
+		"provider_name"     => "Instagram", 
+		"callback"          => TRUE,
+		"require_client_id" => TRUE,
+		"new_app_link"      => "http://instagr.am/developer/clients/manage/", 
+	)
+	,
+	ARRAY( 
 		"provider_id"       => "Identica",
 		"provider_name"     => "Identica", 
 		"new_app_link"      => "http://identi.ca/settings/oauthapps/new", 
