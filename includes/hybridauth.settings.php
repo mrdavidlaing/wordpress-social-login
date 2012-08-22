@@ -128,11 +128,11 @@ $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG = ARRAY(
 		"new_app_link"      => NULL, 
 	),
 	ARRAY( 
-		"provider_id"       => "Github",
-		"provider_name"     => "Github", 
+		"provider_id"       => "GitHub",
+		"provider_name"     => "GitHub", 
 		"require_client_id" => TRUE,
 		"callback"          => TRUE,
-		"new_app_link"      => "https://github.com/account/applications/new", 
+		"new_app_link"      => "https://github.com/settings/applications/new", 
 	),
 	ARRAY( 
 		"provider_id"       => "500px",
