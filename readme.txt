@@ -3,7 +3,7 @@ Contributors: miled
 Tags:  facebook, google, yahoo, twitter, windows live, myspace, foursquare, linkedin, gowalla, last.fm, instagram, goodreads, tumblr, aol, vkontakte, stackoverflow, github, 500px, skyrock, mixi.jp, steam, login, register, comment, social, social networks, social login
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 Donate link: http://bit.ly/OTuFYN
 License: MIT License
 License URI: http://www.opensource.org/licenses/MIT
