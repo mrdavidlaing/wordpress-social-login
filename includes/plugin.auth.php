@@ -201,7 +201,7 @@ function wsl_get_user_by_meta( $provider, $user_uid )
 
 /**
 * send a notification to blog administrator when a new user register using WSL
-* again borrowed (and eh, AS IS) from http://wordpress.org/extend/plugins/oa-social-login/
+* again borrowed (and eh, almost AS IS) from http://wordpress.org/extend/plugins/oa-social-login/
 */
 function wsl_admin_notification( $user_id, $provider )
 {
@@ -213,9 +213,14 @@ function wsl_admin_notification( $user_id, $provider )
 	// in sanitize_option we want to reverse this for the plain text arena of emails.
 	$blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
 
-	$message  = sprintf(__('New user registration on your site %s:'), $blogname) . "\r\n\r\n";
-	$message .= sprintf(__('Username: %s'), $user_login) . "\r\n\r\n";
-	$message .= sprintf(__('Social Network: %s'), $provider) . "\r\n";
+	$message  = sprintf(__('New user registration on your site: %s'), $blogname) . "\r\n\r\n";
+	$message .= sprintf(__('Username: %s'), $user_login) . "\r\n";
+	$message .= sprintf(__('Provider: %s'), $provider) . "\r\n";
+	$message .= sprintf(__('Profile: %s'), wp_specialchars_decode($user->user_url, ENT_QUOTES)) . "\r\n";
+	$message .= sprintf(__('Email: %s'), wp_specialchars_decode($user->user_email, ENT_QUOTES)) . "\r\n";
+	$message .= "\r\n--\r\n";
+	$message .= "WordPress Social Login\r\n";
+	$message .= "http://wordpress.org/extend/plugins/wordpress-social-login/\r\n";
 
 	@wp_mail(get_option('admin_email'), '[WordPress Social Login] '.sprintf(__('[%s] New User Registration'), $blogname), $message);
 }
