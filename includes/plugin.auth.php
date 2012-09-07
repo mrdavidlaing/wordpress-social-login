@@ -216,8 +216,8 @@ function wsl_admin_notification( $user_id, $provider )
 	$message  = sprintf(__('New user registration on your site: %s'), $blogname) . "\r\n\r\n";
 	$message .= sprintf(__('Username: %s'), $user_login) . "\r\n";
 	$message .= sprintf(__('Provider: %s'), $provider) . "\r\n";
-	$message .= sprintf(__('Profile: %s'), wp_specialchars_decode($user->user_url, ENT_QUOTES)) . "\r\n";
-	$message .= sprintf(__('Email: %s'), wp_specialchars_decode($user->user_email, ENT_QUOTES)) . "\r\n";
+	$message .= sprintf(__('Profile: %s'), $user->user_url . "\r\n";
+	$message .= sprintf(__('Email: %s'), $user->user_email . "\r\n";
 	$message .= "\r\n--\r\n";
 	$message .= "WordPress Social Login\r\n";
 	$message .= "http://wordpress.org/extend/plugins/wordpress-social-login/\r\n";
