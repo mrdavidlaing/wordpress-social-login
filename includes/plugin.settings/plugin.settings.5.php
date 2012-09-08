@@ -62,10 +62,10 @@
 	</p>
 </div> 
 
+<form method="post" id="wsl_setup_form" action="options.php"  style="width: 600px;background-color: #FFFFE0;border:1px solid #E6DB55; border-radius: 3px;padding: 10px;margin-left:10px;">  
 
 <h3>Basic Settings </h3>  
 
-<form method="post" id="wsl_setup_form" action="options.php"  style="width: 600px;background-color: #FFFFE0;border:1px solid #E6DB55; border-radius: 3px;padding: 10px;margin-left:10px;">  
 <?php settings_fields( 'wsl-settings-group-customize' ); ?>
 
 
@@ -105,38 +105,24 @@
 			<option <?php if(   get_option( 'wsl_settings_users_avatars' ) ) echo "selected"; ?> value="1">Display users avatars from social networks when available</option>
 		</select> 
     </td>
-  </tr>
- 
-  <tr>
-    <td>&nbsp;</td>
-    <td><input type="submit" class="button-primary" value="Save" /> </td>
-  </tr>
+  </tr> 
 </table>
-
-</form>
-
-<br />
+ 
+<hr style="border-width: 0 0 1px;" />
 
 <h3>Advanced Settings </h3> 
-
-<form method="post" id="wsl_setup_form" action="options.php"   style="width: 600px;background-color: #FFFFE0;border:1px solid #E6DB55; border-radius: 3px;padding: 10px;margin-left:10px;">    
-<?php settings_fields( 'wsl-settings-group-customize' ); ?>
-
-
-
+ 
 <table width="600" border="0" cellpadding="5" cellspacing="2" >
-
-<!--
+ 
   <tr>
     <td align="right"><strong>Authentication flow:</strong></td>
     <td>
 		<select name="wsl_settings_use_popup" style="width: 440px;">
-			<option <?php if( ! get_option( 'wsl_settings_use_popup' ) ) echo "selected"; ?> value="0">Using popup window</option> 
-			<option <?php if(   get_option( 'wsl_settings_use_popup' ) ) echo "selected"; ?> value="1">No popup window</option> 
+			<option <?php if( get_option( 'wsl_settings_use_popup' ) == 1 || ! get_option( 'wsl_settings_use_popup' ) ) echo "selected"; ?> value="1">Using popup window</option> 
+			<option <?php if( get_option( 'wsl_settings_use_popup' ) == 2 ) echo "selected"; ?> value="2">No popup window</option> 
 		</select>  
     </td>
-  </tr>
--->
+  </tr> 
 
   <tr>
 
