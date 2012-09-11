@@ -26,10 +26,6 @@
 	</p>
 </div>
  
- 
-<script type='text/javascript' src='<?php echo WORDPRESS_SOCIAL_LOGIN_PLUGIN_URL ?>/assets/js/highcharts.js'></script>
-
- 
 <center>
 	<table width="80%">
 		<tr>
