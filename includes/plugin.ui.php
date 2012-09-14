@@ -12,7 +12,7 @@ function wsl_render_login_form()
 
 <!--
    wsl_render_login_form
-   WordPress Social Login Plugin ( <?php echo $_SESSION["wsl::plugin"] ?> )-030520122240
+   WordPress Social Login Plugin ( <?php echo $_SESSION["wsl::plugin"] ?> ) 
    http://wordpress.org/extend/plugins/wordpress-social-login/
 -->
 	<span id="wp-social-login-connect-with"><?php echo $wsl_settings_connect_with_label ?></span>
@@ -159,17 +159,16 @@ add_action( 'wp_head', 'wsl_add_stylesheets' );
  * Improved by <jlnd>
  * http://wordpress.org/support/profile/jlnd
  *
+ * fix by <seand11>, <kekrug>
+ * http://wordpress.org/support/topic/plugin-wordpress-social-login-avatars-getting-cached-and-users-seeing-other-avatars-as-their-own
+ *
  * thanks a million
  */
 function wsl_user_custom_avatar($avatar, $id_or_email, $size, $default, $alt) {
 	global $comment;
 
 	if( get_option ('wsl_settings_users_avatars') && !empty ($avatar)) {
-		//Check if we are in a comment
-		if (!is_null ($comment) && !empty ($comment->user_id)) {
-			$user_id = $comment->user_id;
-		}
-		elseif(!empty ($id_or_email)) {
+		if(!empty ($id_or_email)) {
 			if ( is_numeric($id_or_email) ) {
 				$user_id = (int) $id_or_email;
 			}
@@ -180,6 +179,12 @@ function wsl_user_custom_avatar($avatar, $id_or_email, $size, $default, $alt) {
 				$user_id = (int) $id_or_email->user_id;
 			}
 		}
+
+		//Check if we are in a comment
+		if (!is_null ($comment) && !empty ($comment->user_id)) {
+			$user_id = $comment->user_id;
+		}
+
 		// Get the thumbnail provided by WordPress Social Login
 		if ($user_id) {
 			if (($user_thumbnail = get_user_meta ($user_id, 'wsl_user_image', true)) !== false) {
@@ -192,9 +197,8 @@ function wsl_user_custom_avatar($avatar, $id_or_email, $size, $default, $alt) {
 		}
 	}
 
-	// No avatar found.  Return unfiltered.
+	// No avatar found. Return unfiltered.
 	return $avatar;
 }
 
 add_filter ( 'get_avatar', 'wsl_user_custom_avatar', 10, 5);
-
