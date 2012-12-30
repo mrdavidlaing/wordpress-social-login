@@ -1,4 +1,6 @@
-<?php   
+<?php  
+	@ session_start(); 
+	
 	if ( isset( $_REQUEST['xhrurl'] ) ) {
 		$testing = @ $_REQUEST['xhrurl'];
 		

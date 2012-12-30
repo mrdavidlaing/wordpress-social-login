@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	@ session_start(); 
 
 	// let display a loading message. should be better than a white screen
 	if( isset( $_GET["provider"] ) && ! isset( $_GET["redirect_to_provider"] )){
