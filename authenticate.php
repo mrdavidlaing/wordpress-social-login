@@ -91,6 +91,7 @@ html {
 
 			// if facebook
 			if( strtolower( $provider ) == "facebook" ){
+				$config["providers"][$provider]["scope"]   = "email, user_about_me, user_birthday, user_hometown, user_website";
 				$config["providers"][$provider]["display"] = "popup";
 			}
 
