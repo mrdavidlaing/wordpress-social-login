@@ -1,6 +1,11 @@
 <?php
 $WORDPRESS_SOCIAL_LOGIN_PROVIDERS_CONFIG = ARRAY(
 	ARRAY( 
+		"provider_id"       => "Dropbox",
+		"provider_name"     => "Dropbox", 
+		"new_app_link"      => "https://www.dropbox.com/developers/apps", 
+	)
+	,ARRAY( 
 		"provider_id"       => "Facebook",
 		"provider_name"     => "Facebook", 
 		"require_client_id" => TRUE, 
